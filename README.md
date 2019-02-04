@@ -19,4 +19,5 @@
 
 - [人工合成的阿哈利姆神杖](Item/aghanim's_scepter_synth/README.md)
 - [属性增强书](Item/books_of_stats/README.md)
+- [闪烁匕首](Item/blink_dagger/README.md)
 
