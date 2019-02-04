@@ -1,0 +1,72 @@
+"DOTAAbilities"
+{
+
+	//==================================================================
+	// 极速兔子
+	//================================================================== 
+	"item_mjz_speed_rabbit"
+	{
+		"ID"							"70124"
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityTextureName"		    "mjz_speed_rabbit"
+
+		"ItemCost"						"1000"	
+		"ItemShopTags"					"move_speed"
+		"ItemQuality"					"common"
+		"ItemAliases"					"speed"
+		"ItemCastOnPickup"				"1"
+
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus"         		"15"
+			}
+
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_count"				"10"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/item_mjz_speed_rabbit.lua"
+				"Function"				"item_consumable_used"
+				"modifier"              "modifier_item_mjz_speed_rabbit_consumed"
+				"max_count"				"%max_count"
+				"item_cost"				"1000"
+			}
+			"FireSound"
+			{
+				"EffectName"			"DOTA_Item.MoonShard.Consume"
+				"Target"				"CASTER"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_mjz_speed_rabbit_consumed"
+			{
+				"IsBuff"			"1"
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT"
+				"TextureName"		"item_mjz_speed_rabbit"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"		"%bonus"
+				}
+			}
+		}
+	}
+
+
+	
+}
