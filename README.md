@@ -18,3 +18,5 @@
 ## 自定义物品列表
 
 - [人工合成的阿哈利姆神杖](Item/aghanim's_scepter_synth/README.md)
+- [属性增强书](Item/books_of_stats/README.md)
+

@@ -1,0 +1,628 @@
+"DOTAAbilities"
+{
+
+
+	//=================================================================================================================
+	// Book Of Stats              	属性书
+	//	| name 			| 	cost	| 		effect	|
+	//	intelligence		300	        +3
+	//	strength			300			+3
+	//	agility				300			+3
+	//	all stats			900			+3	all
+	//	intelligence 10x	3000	    +30
+	//	strength	 10x	3000		+30
+	//	agility		 10x	3000		+30
+	//	all stats	 10x	9000		+30	all
+	//=================================================================================================================
+	"item_book_intelligence"		
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"90003"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_book_intelligence"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"300"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"enchanted mango"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"SideShop"						"0"
+		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
+		"ItemSellable"					"0"
+		"ShouldBeSuggested"				"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "CURSOR_TARGET"
+				"ModifierName" "modifier_item_book_intelligence"
+			}
+			"FireSound"
+			{
+				"Target" "UNIT"
+				"EffectName"		""
+			}
+			"SpendCharge"
+			{}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_book_intelligence"
+			{
+				"EffectAttachType" "follow_origin"
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"			"1"
+				"Passive"			"0"
+				"TextureName" 		"item_book_intelligence"
+				"EffectName"		"particles/econ/events/ti6/hero_levelup_ti6_flash_hit_magic.vpcf"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" 	"%int_gain"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int_gain"		"3"
+			}
+		}
+	}
+	"item_book_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"90004"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_book_strength"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"300"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"enchanted mango"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"SideShop"						"0"
+		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
+		"ItemSellable"					"0"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "CURSOR_TARGET"
+				"ModifierName" "modifier_item_book_strength"
+			}
+			"FireSound"
+			{
+				"Target" "UNIT"
+				"EffectName" ""
+			}
+			"SpendCharge"
+			{}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_book_strength"
+			{
+				"EffectAttachType" "follow_origin"
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"			"1"
+				"Passive"			"0"
+				"TextureName" 		"item_book_strength"
+				"EffectName"		"particles/econ/events/ti7/hero_levelup_ti7_flash_hit_magic.vpcf"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" 	"%str_gain"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str_gain"				"3"
+			}
+		}
+	}
+	"item_book_agility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"90005"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_book_agility"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"300"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"enchanted mango"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"SideShop"						"0"
+		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
+		"ItemSellable"					"0"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "CURSOR_TARGET"
+				"ModifierName" "modifier_item_book_agility"
+			}
+			"FireSound"
+			{
+				"Target" "UNIT"
+				"EffectName" ""
+			}
+			"SpendCharge"
+			{}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_book_agility"
+			{
+				"EffectAttachType" "follow_origin"
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"			"1"
+				"Passive"			"0"
+				"TextureName" 		"item_book_agility"
+				"EffectName"		"particles/econ/events/ti7/hero_levelup_ti7_flash_hit_magic.vpcf"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 	"%agi_gain"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi_gain"		"3"
+			}
+		}
+	}
+	"item_book_all_stats"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"90006"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_book_allstats"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"900"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"enchanted mango"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"SideShop"						"0"
+		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
+		"ItemSellable"					"0"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "CURSOR_TARGET"
+				"ModifierName" "modifier_item_book_all_stats"
+			}
+			"FireSound"
+			{
+				"Target" "UNIT"
+				"EffectName" ""
+			}
+			"SpendCharge"
+			{}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_book_all_stats"
+			{
+				"EffectAttachType" "follow_origin"
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"			"1"
+				"Passive"			"0"
+				"TextureName" 		"item_book_allstats"
+				"EffectName"		"particles/econ/events/ti7/hero_levelup_ti7_flash_hit_magic.vpcf"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 	"%agi_gain"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" 	"%str_gain"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%int_gain"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi_gain"				"3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str_gain"				"3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int_gain"				"3"
+			}
+		}
+	}
+	"item_book_intelligence_10x"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"90007"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_book_intelligence"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3000"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"enchanted mango"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"SideShop"						"0"
+		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
+		"ItemSellable"					"0"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "CURSOR_TARGET"
+				"ModifierName" "modifier_item_book_intelligence_10x"
+			}
+			"FireSound"
+			{
+				"Target" "UNIT"
+				"EffectName"		""
+			}
+			"SpendCharge"
+			{}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_book_intelligence_10x"
+			{
+				"EffectAttachType" "follow_origin"
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"			"1"
+				"Passive"			"0"
+				"TextureName" 		"item_book_intelligence"
+				"EffectName"		"particles/econ/events/ti7/hero_levelup_ti7_flash_hit_magic.vpcf"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" 	"%int_gain"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int_gain"		"30"
+			}
+		}
+	}
+	"item_book_strength_10x"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"90008"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_book_strength"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3000"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"enchanted mango"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"SideShop"						"0"
+		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
+		"ItemSellable"					"0"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "CURSOR_TARGET"
+				"ModifierName" "modifier_item_book_strength_10x"
+			}
+			"FireSound"
+			{
+				"Target" "UNIT"
+				"EffectName" ""
+			}
+			"SpendCharge"
+			{}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_book_strength_10x"
+			{
+				"EffectAttachType" "follow_origin"
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"			"1"
+				"Passive"			"0"
+				"TextureName" 		"item_book_strength"
+				"EffectName"		"particles/econ/events/ti7/hero_levelup_ti7_flash_hit_magic.vpcf"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" 	"%str_gain"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str_gain"				"30"
+			}
+		}
+	}
+	"item_book_agility_10x"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"90009"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_book_agility"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3000"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"enchanted mango"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"SideShop"						"0"
+		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
+		"ItemSellable"					"0"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "CURSOR_TARGET"
+				"ModifierName" "modifier_item_book_agility_10x"
+			}
+			"FireSound"
+			{
+				"Target" "UNIT"
+				"EffectName" ""
+			}
+			"SpendCharge"
+			{}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_book_agility_10x"
+			{
+				"EffectAttachType" "follow_origin"
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"			"1"
+				"Passive"			"0"
+				"TextureName" 		"item_book_agility"
+				"EffectName"		"particles/econ/events/ti7/hero_levelup_ti7_flash_hit_magic.vpcf"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 	"%agi_gain"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi_gain"		"30"
+			}
+		}
+	}
+	"item_book_all_stats_10x"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"90010"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_book_allstats"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"9000"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"enchanted mango"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"SideShop"						"0"
+		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
+		"ItemSellable"					"0"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "CURSOR_TARGET"
+				"ModifierName" "modifier_item_book_all_stats_10x"
+			}
+			"FireSound"
+			{
+				"Target" "UNIT"
+				"EffectName" ""
+			}
+			"SpendCharge"
+			{}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_book_all_stats_10x"
+			{
+				"EffectAttachType" "follow_origin"
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"			"1"
+				"Passive"			"0"
+				"TextureName" 		"item_book_allstats"
+				"EffectName"		"particles/econ/events/ti7/hero_levelup_ti7_flash_hit_magic.vpcf"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 	"%agi_gain"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" 	"%str_gain"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%int_gain"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi_gain"				"30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"str_gain"				"30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int_gain"				"30"
+			}
+		}
+	}
+
+
+
+}

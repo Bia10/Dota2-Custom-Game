@@ -1,0 +1,22 @@
+"dota_shops"
+{
+    "consumables"
+	{
+	
+		// book of stats
+		"item"		"item_book_strength"
+		"item"		"item_book_agility"
+		"item"		"item_book_intelligence"
+		"item"		"item_book_all_stats"
+	}
+
+	"attributes"
+	{
+		// book of stats
+		"item"		"item_book_strength_10x"
+		"item"		"item_book_agility_10x"
+		"item"		"item_book_intelligence_10x"
+		"item"		"item_book_all_stats_10x"
+	}
+	
+}
