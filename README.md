@@ -13,3 +13,8 @@
 - [设置英雄列表](Learn/设置英雄列表.md)
 - [游戏时间设置](Learn/游戏时间设置.md)
 
+
+
+## 自定义物品列表
+
+- [人工合成的阿哈利姆神杖](Item/aghanim's_scepter_synth/README.md)
