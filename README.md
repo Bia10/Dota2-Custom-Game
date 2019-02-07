@@ -26,4 +26,5 @@
 - [红色蝴蝶、蓝色蝴蝶](Item/butterfly/README.md)
 - [比干的七巧玲珑心](Item/bigan_octarine_core/README.md)
 - [月光宝盒](Item/moonlight_treasure_box/README.md)
+- [迅速的黑皇杖](Item/black_king_bar_faster/README.md)
 
