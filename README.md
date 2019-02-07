@@ -22,4 +22,5 @@
 - [闪烁匕首](Item/blink_dagger/README.md)
 - [回音战刃](Item/echo_sabre/README.md)
 - [极速兔子](Item/speed_rabbit/README.md)
+- [红色的圣剑](Item/red_divine_rapier/README.md)
 
