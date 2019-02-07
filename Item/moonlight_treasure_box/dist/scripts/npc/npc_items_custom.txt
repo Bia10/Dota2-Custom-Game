@@ -1,0 +1,128 @@
+"DOTAAbilities"
+{
+
+	//=================================================================================================================
+	// 月光宝盒 The Moonlight Treasure Box
+	//=================================================================================================================
+	"item_moonlight_treasure_box"	
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"73333"
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"moonlight_treasure_box"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3333"
+		"ItemShopTags"					"teleport"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"The Moonlight Treasure Box;Time Lapse"
+		"ItemStackable"					"0"			//是否可以堆叠
+		"ItemPermanent"					"1"
+		"ItemPurchasable"               "1"			//是否能买得到
+		"ItemSellable"					"1"			//是否可以卖掉
+		"ItemDroppable"					"1"			//是否可丢弃
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"	//共享物品
+		"ItemCastOnPickup"				"0"			//是否拾起就使用
+		"SideShop"						"1"			//是否在旁边的商店出售
+		"SecretShop"					"1"			//是否在神秘商店出售
+		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
+		"ShouldBeSuggested"				"1"
+		
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_weaver.vsndevts"
+			"particle"			"particles/units/heroes/hero_weaver/weaver_timelapse.vpcf"
+		}
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.25"	// mostly about the blink
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"backtrack_time"		"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_range"			"1000"
+			}
+			//------------- special values ---------------------------
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"remember_interval"		"0.2"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Hero_Weaver.TimeLapse"
+				"Target"		"TARGET"
+			}
+			"FireEffect"
+			{
+				"EffectName"	"particles/units/heroes/hero_weaver/weaver_timelapse.vpcf"
+				"Target"		"TARGET"		
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"items/item_moonlight_treasure_box.lua"
+				"Function"		"TimeLapseRewind"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_rewind_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+
+				"ThinkInterval"		"%remember_interval"
+				"OnIntervalThink"
+				{	
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_moonlight_treasure_box.lua"
+						"Function"			"TimeLapseSave"
+						"DamageTaken"		"%attack_damage"
+						"BacktrackTime"		"%backtrack_time"
+						"Interval"			"%remember_interval"
+					}
+				}
+			}
+		}
+	}
+
+	
+}

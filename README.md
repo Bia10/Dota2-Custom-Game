@@ -25,4 +25,5 @@
 - [红色的圣剑](Item/red_divine_rapier/README.md)
 - [红色蝴蝶、蓝色蝴蝶](Item/butterfly/README.md)
 - [比干的七巧玲珑心](Item/bigan_octarine_core/README.md)
+- [月光宝盒](Item/moonlight_treasure_box/README.md)
 
