@@ -1,0 +1,213 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Recipe: Real Monkey King Bar		真正的金箍棒
+	//=================================================================================================================
+	"item_recipe_real_monkey_king_bar"
+	{
+		"ID"							"70134"
+		"BaseClass"                     "item_datadriven"
+		
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_real_monkey_king_bar"
+		"ItemRequirements"
+		{
+			// 金箍棒（4175） + 金箍棒（4175）
+			"01"						"item_monkey_king_bar;item_monkey_king_bar"
+			// "01"						"item_demon_edge;item_javelin;item_quarterstaff"
+			// "01"		"item_boots"
+		}
+	}
+	"item_real_monkey_king_bar"
+	{
+		"ID"							"70135"	
+		"BaseClass"                     "item_datadriven"
+		// "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"real_monkey_king_bar"
+
+		// Casting
+		// "AbilityCastAnimation"			"ACT_DOTA_MK_STRIKE"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.4"
+		"AbilityCastRange"				"1200"
+
+		// Time		
+		"AbilityCooldown"				"30"
+
+		// Cost
+		"AbilityManaCost"				"15"	
+
+		"ItemCost"						"8350"
+		"ItemShopTags"					"damage;attack_speed;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"mkb;monkey king bar"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+
+		"precache"
+		{
+			// "particle"					"particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+			// "particle" 					"particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf" 	   
+
+			"particle"  				"particles/units/heroes/hero_monkey_king/monkey_king_strike_slow.vpcf"
+			"particle"  				"particles/units/heroes/hero_monkey_king/monkey_king_strike_cast.vpcf"
+			"particle"  				"particles/units/heroes/hero_monkey_king/monkey_king_strike.vpcf"
+			"particle"  				"particles/units/heroes/hero_monkey_king/monkey_king_spring_slow.vpcf"
+
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_monkey_king.vsndevts"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"88"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_speed"		"20"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_chance"				"75"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_chance_damage"		"100"
+			}
+			"05"							//攻击力百分比加成
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage_percentage"	"40"
+			}
+			"06"							//棒击大地.眩晕时间
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"2.0"			
+			}
+			"07"							//棒击大地.致命一击伤害
+			{
+				"var_type"					"FIELD_INTEGER"
+				"strike_crit_mult"			"300"
+				// "LinkedSpecialBonus"		"special_bonus_unique_monkey_king"	//天赋相关的
+			}
+			"08"							//棒击大地.效果宽度
+			{
+				"var_type"					"FIELD_INTEGER"
+				"strike_radius"				"150"
+			}
+			"09"							//棒击大地.效果长度
+			{
+				"var_type"					"FIELD_INTEGER"
+				"strike_cast_range"			"1200"
+			}
+			"10"							//棒击大地.减缓攻击速度
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_speed_slow"			"-30"
+			}
+			"11"							//棒击大地.减缓移动速度
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_slow"				"-30"
+			}
+			"12"							//棒击大地.减缓效果持续时间
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slow_duration"				"2"
+			}
+
+
+		}
+
+		"OnSpellStart"
+		{
+			"FireSound"					//播放声音
+			{
+				"EffectName"    		"Hero_MonkeyKing.Strike.Cast"
+				"Target"        		"CASTER"
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"			"items/item_real_monkey_king_bar.lua"
+				"Function"				"OnSpellStart"
+				"particle"      		"particles/units/heroes/hero_monkey_king/monkey_king_strike.vpcf"
+				"debuff_name"			"modifier_item_real_monkey_king_bar_debuff"
+				"debuff_duration"		"%slow_duration"
+				"moved"					"false"		//金箍棒是否能弹开其他单位
+			}
+		}
+
+		"OnAbilityPhaseStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/item_real_monkey_king_bar.lua"
+				"Function"				"OnAbilityPhaseStart"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_real_monkey_king_bar"
+			{
+				"Passive"           "1"
+				"IsHidden"          "1"
+				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"	//可叠加
+	
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"       "%bonus_damage_percentage"  //攻击百分比加成
+					// "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"        	"%bonus_strength"        	//力量
+					// "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 			"%bonus_agility"			//敏捷
+					// "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"      		"%bonus_intellect"        	//智力
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage"				//攻击力
+					// "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"				//护甲
+					// "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"        "15"        			//魔抗加成
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  	"%bonus_attack_speed"		//攻击速度
+					// "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"        "100"					//移动速度
+					// "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"        "10"        				//生命恢复速度
+              		// "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"        "10"        					//魔法恢复速度
+				}
+			}
+
+			"modifier_item_real_monkey_king_bar_debuff"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"1"
+				"TextureName"		"item_real_monkey_king_bar"
+
+				// "EffectName"			"particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+				// "EffectAttachType"		"follow_origin"
+		
+				// "StatusEffectName" 		"particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf" 	   
+				// "StatusEffectPriority"  "10"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" 		"%attack_speed_slow"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" 		"%movement_slow" 
+				}
+			}
+
+		}
+
+	}
+	
+	
+}
