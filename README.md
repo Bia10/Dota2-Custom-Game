@@ -27,4 +27,5 @@
 - [比干的七巧玲珑心](Item/bigan_octarine_core/README.md)
 - [月光宝盒](Item/moonlight_treasure_box/README.md)
 - [迅速的黑皇杖](Item/black_king_bar_faster/README.md)
+- [天鹰之戒](Item/ring_of_aquila/README.md)
 
