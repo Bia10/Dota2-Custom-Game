@@ -45,6 +45,8 @@
 
 - [魔法护盾](Item/mana_shield/README.md)
 
+- [莱恩的大根](Item/mjz_dagon/README.md)
+
   
 
 

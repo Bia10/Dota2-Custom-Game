@@ -1,0 +1,162 @@
+"DOTAAbilities"
+{
+
+	//=================================================================================================================
+	// Dagon							达贡之神力
+	//=================================================================================================================
+	"item_recipe_mjz_dagon"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"71103"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjz_dagon"
+		"ItemRequirements"
+		{
+			//达贡之神力 Lv5（7700） + 卷轴：达贡之神力（1250） + 慧光（2050）
+			"01"						"item_dagon_5;item_recipe_dagon;item_kaya"
+			// "01"						"item_boots"
+		}
+	}
+	"item_mjz_dagon"
+	{
+		"ID"							"71104"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"mjz_dagon"	//"item_dagon_5"
+
+
+		// Stats
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilitySharedCooldown"			"dagon"
+
+		// Item Info
+		"AbilityManaCost"				"200"
+		"ItemCost"						"11000"
+		"ItemShopTags"					"mjz;damage;int;str;agi;hard_to_tag"
+		"ItemQuality"					"rare"	
+		"ItemAliases"					"dagon"
+		// "MaxUpgradeLevel"				"5"
+		"ItemBaseLevel"					"99"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		// "UpgradesItems"					"item_dagon;item_dagon_2;item_dagon_3;item_dagon_4"
+		// "UpgradeRecipe"					"item_recipe_dagon"
+		"ShouldBeSuggested"				"1"
+		
+
+		"particle"
+		{
+			"particle"					"particles/items_fx/dagon.vpcf"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_intellect"			"25"	//"15 18 21 24 27"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_all_stats"			"3"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"800"	//"400 500 600 700 800"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"range_tooltip"				"900"	//"600 650 700 750 800"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage_delay"				"0"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"mana_cost_tooltip"			"120"
+			}
+			"07"							//每次击杀伤害加成
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_per_kill"			"40"
+			}
+			"08"							//技能溅射范围
+			{
+				"var_type"					"FIELD_FLOAT"
+				"splash_radius_scepter"		"325"
+			}
+			"09"							//击杀计算时间（多少秒内死亡可以有伤害加成）
+			{
+				"var_type"					"FIELD_FLOAT"
+				"kill_grace_duration"		"10"
+			}
+			
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"items/item_mjz_dagon.lua"
+				"Function"			"OnSpellStart"
+				"Damage"			"%damage"
+				"ModifierDeath"		"modifier_item_mjz_dagon_kill_counter"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_mjz_dagon"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_intellect"
+					// "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				}
+			}
+
+			"modifier_item_mjz_dagon_kill_counter"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"TextureName"		"item_mjz_dagon"
+				
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_mjz_dagon.lua"
+						"Function"			"TargetOnDeath"
+						"ItemName"			"item_mjz_dagon"
+					}
+				}
+			}
+		}
+	}
+	
+}
