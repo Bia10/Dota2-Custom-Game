@@ -1,0 +1,233 @@
+"DOTAAbilities"
+{
+
+	//=================================================================================================================
+	// Recipe: Split Shot				分裂箭
+	//=================================================================================================================
+	"item_recipe_mjz_split_shot"
+	{
+		"ID"							"70136"
+		"BaseClass"                     "item_datadriven"
+		
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjz_split_shot"
+		"ItemRequirements"
+		{
+			// 魔龙枪（1900） + 振奋宝石（2000） + 圣者遗物（3800）
+			"01"						"item_dragon_lance;item_hyperstone;item_relic"
+			// "01"						"item_boots"
+		}
+	}
+	"item_mjz_split_shot"
+	{
+		"ID"							"70137"	
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitTargetFlag"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"mjz_split_shot"
+
+		"AbilityCastPoint"				"0.4"
+
+		// Item Info
+        "ItemCost"						"7700"
+        "ItemBaseLevel"                 "1"
+        "ItemShopTags"					"mjz split shot;split shot"
+        "ItemQuality"					"artifact"
+        "ItemAliases"					"split shot"
+        "ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "ItemSellable"                  "1" 
+        "ItemKillable"					"1"
+        "ItemDroppable"					"1"
+
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+			"particle"			"particles/units/heroes/hero_medusa/medusa_bow_split_shot_cast.vpcf"
+			"particle"			"particles/units/heroes/hero_medusa/medusa_base_attack.vpcf"
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_modifier"				"-20"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_modifier_tooltip"		"80"
+			}
+			"03"
+			{	
+				"var_type"						"FIELD_INTEGER"
+				"arrow_count"					"4"
+			}
+			"04"
+			{	
+				"var_type"						"FIELD_INTEGER"
+				"total_arrow_count"				"5"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"range"							"700"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"projectile_speed"				"1200"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_attack_range"			"140"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_strength"				"12"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_agility"					"12"
+			}
+			"10"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_damage"					"10"
+			}
+		}
+
+		"OnToggleOn"
+		{
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_medusa/medusa_bow_split_shot_cast.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "CASTER"
+			}
+
+			// "ApplyModifier"
+			// {
+			// 	"ModifierName"		"modifier_mjz_split_shot_effect"
+			// 	"Target" 			"CASTER"
+			// }
+			"RunScript"
+			{
+				"ScriptFile"				"items/item_mjz_split_shot.lua"
+				"Function"					"OnToggleOn"
+				"ModifierName"				"modifier_mjz_split_shot_effect"
+			}
+		}
+
+		"OnToggleOff"
+		{
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_medusa/medusa_bow_split_shot_cast.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "CASTER"
+			}
+
+			"RemoveModifier"
+			{
+				"ModifierName"		"modifier_mjz_split_shot_effect"
+				"Target"
+				{
+					"Center"		"CASTER"
+					"Flags" 		"DOTA_UNIT_TARGET_FLAG_DEAD"
+				}
+			}
+		}
+
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"	"1"
+			
+			"FireSound"
+			{
+				"EffectName"	"Hero_Medusa.AttackSplit"
+				"Target" 		"TARGET"
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"	"items/item_mjz_split_shot.lua"
+				"Function"		"SplitShotDamage"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_mjz_split_shot"
+			{
+				"Passive"           "1"
+				"IsHidden"          "1"
+				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"	//可叠加
+	
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"        "%bonus_strength"        	//力量
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 		"%bonus_agility"			//敏捷
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"				//攻击力
+				}
+			}
+
+			"modifier_mjz_split_shot_effect"
+			{
+				"Passive"			"0"
+				"IsHidden"			"1"
+				"IsDebuff"			"0"
+		
+				"OnAttack"
+				{
+					"RunScript"
+					{
+						"ScriptFile"				"items/item_mjz_split_shot.lua"
+						"Function"					"SplitShotLaunch"
+						"split_shot_projectile"		"particles/units/heroes/hero_medusa/medusa_base_attack.vpcf"
+						"is_special_attack"			"false"
+					}
+				}
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"%damage_modifier" 
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"			"%bonus_attack_range"
+				}
+			}
+
+			"modifier_item_mjz_split_shot_general_attack_flag"
+			{
+				"IsPurgable"				"0"
+				"IsHidden"					"1"
+			
+				// "Properties"
+				// {
+				// 		"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"0"
+				// }
+			}
+			"modifier_item_mjz_split_shot_special_attack_flag"
+			{
+				"IsPurgable"				"0"
+				"IsHidden"					"1"
+			
+				// "Properties"
+				// {
+				// 	"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"0"
+				// }
+			}
+		}
+	}
+
+	
+}

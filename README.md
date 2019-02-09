@@ -41,6 +41,8 @@
 
 - [真正的金箍棒](Item/real_monkey_king_bar/README.md)
 
+- [分裂箭](Item/split_shot/README.md)
+
   
 
 
