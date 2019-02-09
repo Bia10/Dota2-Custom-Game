@@ -204,8 +204,10 @@
 			"modifier_mjz_split_shot_effect"
 			{
 				"Passive"			"0"
-				"IsHidden"			"1"
+				"IsHidden"			"0"
 				"IsDebuff"			"0"
+
+				"TextureName"		"item_mjz_split_shot"
 		
 				"OnAttack"
 				{
