@@ -149,6 +149,25 @@
 			}
 		}
 
+		"OnEquip"			//戴上这件物品
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"items/item_mjz_split_shot.lua"
+				"Function"			"OnEquip"
+				"ModifierName"		"modifier_mjz_split_shot_effect"
+			}
+		}
+		"OnUnequip"			//脱下这件物品
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"items/item_mjz_split_shot.lua"
+				"Function"			"OnUnequip"
+				"ModifierName"		"modifier_mjz_split_shot_effect"
+			}
+		}
+
 		"OnProjectileHitUnit"
 		{
 			"DeleteOnHit"	"1"
@@ -228,6 +247,5 @@
 			}
 		}
 	}
-
 	
 }

@@ -10,6 +10,21 @@ function OnToggleOn( keys )
 end
 
 
+function OnEquip( keys )        -- 戴上这件物品
+    local caster = keys.caster
+	local ability = keys.ability
+    if ability:GetToggleState() then
+        local modifier_name = keys.ModifierName
+        ability:ApplyDataDrivenModifier(caster, caster, modifier_name, nil)
+    end
+end
+
+function OnUnequip( keys )      -- 脱下这件物品
+    local modifier_name = keys.ModifierName
+    keys.caster:RemoveModifierByName(modifier_name)
+end
+
+
 --[[Author: Pizzalol
 	Date: 04.03.2015.
 	Creates additional attack projectiles for units within the specified radius around the caster]]
