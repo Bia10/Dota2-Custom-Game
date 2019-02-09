@@ -43,6 +43,8 @@
 
 - [分裂箭](Item/split_shot/README.md)
 
+- [魔法护盾](Item/mana_shield/README.md)
+
   
 
 

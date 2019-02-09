@@ -1,0 +1,253 @@
+"DOTAAbilities"
+{
+
+		//=================================================================================================================
+	// Recipe: Mana Shield				魔法盾
+	//=================================================================================================================
+	"item_recipe_mjz_mana_shield"
+	{
+		"ID"							"70139"
+		"BaseClass"                     "item_datadriven"
+		
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjz_mana_shield"
+		"ItemRequirements"
+		{
+			// 林肯法球（5050） + 闪避护符（1400） + 圆盾（200） + 精气之球（1200） + 抗魔斗篷（550）
+			"01"						"item_sphere;item_talisman_of_evasion;item_stout_shield;item_point_booster;item_cloak"
+			// "01"						"item_boots"
+		}
+	}
+	"item_mjz_mana_shield"
+	{
+		"ID"							"70140"	
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		// "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		// "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		// "AbilityUnitTargetFlag"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		// "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		// "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"			//不可驱散	
+		"AbilitySound"					"Hero_Medusa.ManaShield.On"
+		"AbilityTextureName"			"mjz_mana_shield"
+
+		"AbilityCastPoint"				"0.4"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+
+		// Item Info
+        "ItemCost"						"8400"
+        "ItemBaseLevel"                 "1"
+        "ItemShopTags"					"mjz Mana Shield;Mana Shield"
+        "ItemQuality"					"artifact"
+        "ItemAliases"					"Mana Shield"
+        "ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "ItemSellable"                  "1" 
+        "ItemKillable"					"1"
+        "ItemDroppable"					"1"
+
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+			"particle"			"particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"
+			"particle"			"particles/units/heroes/hero_medusa/medusa_mana_shield_cast.vpcf"
+			"particle"			"particles/units/heroes/hero_medusa/medusa_mana_shield_end.vpcf"
+			"particle"			"particles/units/heroes/hero_medusa/medusa_mana_shield_impact.vpcf"
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"								//每魔法吸收伤害
+			{
+				"var_type"						"FIELD_FLOAT"
+				"damage_per_mana"				"2.5"
+			}
+			"02"								//伤害吸收百分比
+			{
+				"var_type"						"FIELD_FLOAT"
+				"absorption_tooltip"			"60"
+			}
+
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_strength"				"10"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_agility"					"10"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_intellect"				"10"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_damage"					"10"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"health_per_second"				"5"
+			}
+			"10"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"mana_per_second"				"5"
+			}
+			"10"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_health"					"160"
+			}
+			"11"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_mana"					"160"
+			}
+			
+		}
+
+		"OnToggleOn"
+		{
+			"FireSound"
+			{
+				"EffectName"		"Hero_Medusa.ManaShield.On" 
+				"Target" 			"CASTER"
+			}
+
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_medusa/medusa_mana_shield_cast.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "CASTER"
+			}
+
+			"ApplyModifier"
+			{
+				"ModifierName"		"modifier_mjz_mana_shield_effect"
+				"Target" 			"CASTER"
+			}
+		}
+
+		"OnToggleOff"
+		{
+			"FireSound"
+			{
+				"EffectName"		"Hero_Medusa.ManaShield.Off"
+				"Target" 			"CASTER"
+			}
+
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_medusa/medusa_mana_shield_end.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "CASTER"
+			}
+
+			"RemoveModifier"
+			{
+				"ModifierName"		"modifier_mjz_mana_shield_effect"
+				"Target"
+				{
+					"Center"		"CASTER"
+					"Flags" 		"DOTA_UNIT_TARGET_FLAG_DEAD"
+				}
+			}
+		}
+
+		"OnEquip"			//戴上这件物品
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"items/item_mjz_mana_shield.lua"
+				"Function"			"OnEquip"
+				"ModifierName"		"modifier_mjz_mana_shield_effect"
+			}
+		}
+		"OnUnequip"			//脱下这件物品
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"items/item_mjz_mana_shield.lua"
+				"Function"			"OnUnequip"
+				"ModifierName"		"modifier_mjz_mana_shield_effect"
+			}
+		}
+		
+
+		"Modifiers"
+		{
+			"modifier_mjz_mana_shield"
+			{
+				"Passive"           "1"
+				"IsHidden"          "1"
+				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"	//可叠加
+	
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"        "%bonus_strength"        	//力量
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 		"%bonus_agility"			//敏捷
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"      	"%bonus_intellect"        	//智力
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"				//攻击力
+					// "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"				//护甲
+					// "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"        "15"        			//魔抗加成
+					// "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"		//攻击速度
+					// "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"        "100"					//移动速度
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"       "%health_per_second"        //生命恢复速度
+              		"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"        	"%mana_per_second"        	//魔法恢复速度
+					"MODIFIER_PROPERTY_MANA_BONUS"					"%bonus_mana"				//魔法值加成		
+					"MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_health"				//生命值加成
+				}
+			}
+
+			"modifier_mjz_mana_shield_effect"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"0"
+
+				"TextureName"		"item_mjz_mana_shield"
+		
+				"EffectName"		"particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"
+				"EffectAttachType"	"follow_origin"
+		
+				"OnTakeDamage"
+				// "%attack_damage" is set to the damage value after mitigation
+				{
+					"FireSound"
+					{
+						"EffectName"	"Hero_Medusa.ManaShield.Proc"
+						"Target" 		"UNIT"
+					}
+
+					"RunScript"
+					{
+						"ScriptFile"	"items/item_mjz_mana_shield.lua"
+						"Function"		"ManaShield"
+						"Damage"		"%attack_damage"
+					}
+				}
+
+				"ThinkInterval"  "0.03"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items/item_mjz_mana_shield.lua"
+						"Function"		"ManaShieldHealth"
+					}
+				}
+			}
+		}
+	}
+
+
+	
+}
