@@ -1,12 +1,18 @@
 
 function item_consumable_used(keys)
-	local used = consumable_used(keys.caster, keys.ability, keys.modifier, keys.max_count)
+	local caster = keys.caster
+	local ability = keys.ability
+	local item_cost = ability:GetCost()
+
+	local used = consumable_used(caster, ability, keys.modifier, keys.max_count)
 	if used then
-		EmitSoundOn("Item.MoonShard.Consume", keys.caster)
+		EmitSoundOn("Item.MoonShard.Consume", caster)
 	else
 		-- 如果没有无效，就返还金钱	
-		local playerID = keys.caster:GetPlayerID()	-- keys.PlayerID
-		sendBackGold(playerID, keys.item_cost)
+		local playerID = caster:GetPlayerID()	-- keys.PlayerID
+
+		caster:RemoveItem(ability)
+		sendBackGold(playerID, item_cost)
 	end
 end
 
@@ -29,7 +35,9 @@ end
 
 function consumable_used(caster, item, modifier, max_count)
 	local used = increase_modifier(caster, caster, item, modifier, max_count)
-	caster:RemoveItem(item)
+	if used then
+		caster:RemoveItem(item)
+	end
 	return used
 end
 

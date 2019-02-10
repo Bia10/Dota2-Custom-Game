@@ -13,10 +13,10 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"AbilityTextureName"		    "mjz_speed_rabbit"
 
-		"ItemCost"						"1000"	
-		"ItemShopTags"					"move_speed"
-		"ItemQuality"					"common"
-		"ItemAliases"					"speed"
+		"ItemCost"						"800"	
+		"ItemShopTags"					"mjz;move_speed;rabbit;consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"speed rabbit"
 		"ItemCastOnPickup"				"1"
 
 		"AbilitySpecial"
@@ -42,7 +42,6 @@
 				"Function"				"item_consumable_used"
 				"modifier"              "modifier_item_mjz_speed_rabbit_consumed"
 				"max_count"				"%max_count"
-				"item_cost"				"1000"
 			}
 			"FireSound"
 			{
