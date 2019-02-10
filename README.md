@@ -47,6 +47,8 @@
 
 - [莱恩的大根](Item/mjz_dagon/README.md)
 
+- [神之盾](Item/god_shield/README.md)
+
   
 
 

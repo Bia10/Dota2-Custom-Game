@@ -1,0 +1,110 @@
+"DOTAAbilities"
+{
+
+	//=================================================================================================================
+	// Recipe: God's Shield				神之盾
+	//=================================================================================================================
+	"item_recipe_mjz_god_shield"
+	{
+		"ID"							"71070"
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		"IsObsolete"					"1"
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjz_god_shield"
+		"ItemPurchasable"				"0"
+		"ItemRequirements"
+		{
+			// 敏捷便鞋（135） + 敏捷便鞋（135） + 圆盾（200）
+			"01"						"item_slippers;item_slippers;item_stout_shield"
+		}
+	}
+	"item_mjz_god_shield"
+	{
+		"ID"							"71071"														
+		"BaseClass"						"item_datadriven"
+		// "BaseClass"						"item_stout_shield"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"                         "models/props_gameplay/stout_shield.vmdl"
+		"Effect"						"particles/custom/dropped_item_normal.vpcf"
+		"AbilityTextureName"			"mjz_god_shield"
+
+		// Item Info
+		"ItemCost"						"500"
+		"ItemShopTags"					"agi;block"
+		"ItemQuality"					"common"
+		"ItemAliases"					"mjz;pms;god's shield"
+		"ItemPurchasable"				"1"
+		// "IsObsolete"					"1"
+		"ItemSellable"                  "1" 
+        "ItemKillable"					"1"
+        "ItemDroppable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ShouldBeInitiallySuggested"	"1"
+		
+		// Special	
+		"AbilitySpecial"
+		{
+			"01"						//近战格挡伤害
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_block_melee"	"20"
+			}
+			"02"						//远程格挡伤害
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_block_ranged"	"10"
+			}
+			"03"						//格挡几率
+			{
+				"var_type"				"FIELD_INTEGER"
+				"block_chance"			"55"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"6"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_mjz_god_shield"
+			{
+				"Passive"			"1"
+				"IsHidden"			"0"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"TextureName"		"item_mjz_god_shield"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_agility"
+				}
+
+				"OnCreated"
+				{
+					"ApplyModifier"
+					{
+						"Target"			"CASTER"
+						"ModifierName"		"modifier_item_stout_shield"
+					}							
+				}
+
+				"OnDestroy"
+				{
+					"RemoveModifier"
+					{
+						"Target"			"CASTER"
+						"ModifierName"		"modifier_item_stout_shield"
+					}
+				}
+			}
+		}
+	}
+	
+	
+}
