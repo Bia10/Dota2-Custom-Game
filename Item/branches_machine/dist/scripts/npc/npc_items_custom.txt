@@ -1,0 +1,98 @@
+"DOTAAbilities"
+{
+
+	//=================================================================================================================
+	// Branches Machine					种树器
+	//=================================================================================================================
+	"item_recipe_mjz_branches_machine"
+	{
+		"ID"							"71015"
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		"IsObsolete"					"1"
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjz_branches_machine"
+		"ItemPurchasable"				"0"
+		"ItemRequirements"
+		{
+			// 铁树枝干（50）x3 + 树之祭祀（90） + 压制之刃（200）		
+			"01"						"item_branches;item_branches;item_branches;item_tango;item_quelling_blade"
+		}
+	}
+	"item_mjz_branches_machine"
+	{
+		"ID"							"71016"
+		"BaseClass"						"item_datadriven"	//"item_branches"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"Model"							"models/props_gameplay/branch.vmdl"
+		"AbilityTextureName"			"mjz_branches_machine"
+
+		// Stats
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"5.0"
+		"AbilityManaCost"				"5"
+		
+		
+		// Item Info
+		"ItemCost"						"440"
+		"ItemShopTags"					"tree;agi;int;str"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"gg branch;iron branch;tree machine"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stats"		"5"
+			}
+			"02"						//树持续时间
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tree_duration"			"30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range_tooltip"			"500"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/item_mjz_branches_machine.lua"
+				"Function"				"OnSpellStart"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_mjz_branches_machine"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
+				}
+			}
+		}
+	}
+	
+	
+}
