@@ -17,43 +17,61 @@
 
 ## 自定义物品列表
 
-- [人工合成的阿哈利姆神杖](Item/aghanim's_scepter_synth/README.md)
 
-- [属性增强书](Item/books_of_stats/README.md)
 
-- [闪烁匕首](Item/blink_dagger/README.md)
+### 消耗
 
-- [回音战刃](Item/echo_sabre/README.md)
+| 名称                                        | 说明     |
+| ------------------------------------------- | -------- |
+| [属性增强书](Item/books_of_stats/README.md) | 属性提高 |
+| [极速兔子](Item/speed_rabbit/README.md)     | 提高移速 |
+|                                             |          |
 
-- [极速兔子](Item/speed_rabbit/README.md)
 
-- [红色的圣剑](Item/red_divine_rapier/README.md)
 
-- [红色蝴蝶、蓝色蝴蝶](Item/butterfly/README.md)
+### 武器
 
-- [比干的七巧玲珑心](Item/bigan_octarine_core/README.md)
+| 名称                                                | 说明                                           |
+| --------------------------------------------------- | ---------------------------------------------- |
+| [虚灵之刃](Item/mjz_ethereal_blade/README.md)       | 分别三种不同属性加成的虚灵之刃，一共两等级     |
+| [回音战刃](Item/echo_sabre/README.md)               | 武器增加到五个等级，提高属性加成和缩短冷却时间 |
+| [红色的圣剑](Item/red_divine_rapier/README.md)      | 武器增加到五个等级，死亡后不会掉落             |
+| [红色蝴蝶、蓝色蝴蝶](Item/butterfly/README.md)      | 分别两种不同属性加成的蝴蝶                     |
+| [真正的金箍棒](Item/real_monkey_king_bar/README.md) | 主动技能：棒击大地                             |
+| [霜之哀伤](Item/mjz_frostmourne/README.md)          | 大概算是一把神器                               |
+| [分裂箭](Item/split_shot/README.md)                 | 1 VS 5                                         |
 
-- [月光宝盒](Item/moonlight_treasure_box/README.md)
 
-- [迅速的黑皇杖](Item/black_king_bar_faster/README.md)
 
-- [天鹰之戒](Item/ring_of_aquila/README.md)
+### 防具
 
-- [真正的金箍棒](Item/real_monkey_king_bar/README.md)
+| 名称                                                 | 说明             |
+| ---------------------------------------------------- | ---------------- |
+| [迅速的黑皇杖](Item/black_king_bar_faster/README.md) | 冷却时间更短     |
+| [神之盾](Item/god_shield/README.md)                  | 穷鬼盾           |
+| [魔法护盾](Item/mana_shield/README.md)               | 消耗魔法抵挡伤害 |
 
-- [分裂箭](Item/split_shot/README.md)
 
-- [魔法护盾](Item/mana_shield/README.md)
 
-- [莱恩的大根](Item/mjz_dagon/README.md)
+### 法器
 
-- [神之盾](Item/god_shield/README.md)
+| 名称                                                         | 说明                                         |
+| ------------------------------------------------------------ | -------------------------------------------- |
+| [莱恩的大根](Item/mjz_dagon/README.md)                       | 主动：死亡之指，每次成功击杀英雄都会提升威力 |
+| [比干的七巧玲珑心](Item/bigan_octarine_core/README.md)       | 冷却减少更多                                 |
+| [人工合成的阿哈利姆神杖](Item/aghanim's_scepter_synth/README.md) | 能吃的A杖                                    |
 
-- [种树器](Item/branches_machine/README.md)
 
-- [霜之哀伤](Item/mjz_frostmourne/README.md)
 
-  
+### 其他
+
+| 名称                                              | 说明     |
+| ------------------------------------------------- | -------- |
+| [闪烁匕首](Item/blink_dagger/README.md)           | 更快更远 |
+| [月光宝盒](Item/moonlight_treasure_box/README.md) | 时光倒流 |
+| [天鹰之戒](Item/ring_of_aquila/README.md)         | 嗯       |
+| [种树器](Item/branches_machine/README.md)         | 植树造林 |
+|                                                   |          |
 
 
 
