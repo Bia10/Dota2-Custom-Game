@@ -1,0 +1,102 @@
+"DOTAAbilities"
+{
+
+	//========================================================================================================
+	// Potion of Invulnerability		// 无敌药水
+	//========================================================================================================
+	"item_mjz_invincible_potion"
+	{
+		"ID"							"99981"
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		// "Model"							"models/props_gameplay/smoke.vmdl" 
+		"Model" 						"models/props_gameplay/salve_red.vmdl"
+		"Effect" 						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"mjz_invincible_potion"
+
+		"AbilityCooldown"				"60.0"	
+		"AbilityCastRange"				"0"
+
+		"ItemCost"						"1000"
+		"ItemShopTags"					"consumable"
+		"ItemAliases"					"mjz;potion;potion of Invulnerability"
+		"ItemQuality"					"rare"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemStockTime"       			"30"
+		"ItemStockMax"        			"10" 
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"1"
+
+		"precache"
+		{
+			"particle"			"particles/status_fx/status_effect_avatar.vpcf"
+			"particle"			"particles/items_fx/black_king_bar_avatar.vpcf"
+			"particle"			"particles/econ/items/omniknight/omni_ti8_head/omniknight_repel_buff_ti8.vpcf"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"12"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"SpendCharge"		{}
+			"FireSound"
+			{
+				"EffectName"    	"DOTA_Item.BlackKingBar.Activate"			//"Hero_LifeStealer.Rage"
+				"Target"        	"CASTER"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"		"modifier_mjz_invincible_potion_effect"
+				"Target"			"CASTER"
+				"Duration"			"%duration"
+			}
+			"RunScript"
+			{
+				"ScriptFile"		"items/item_mjz_invincible_potion.lua"
+				"Function"			"Invulnerability"
+			}
+			// "FireEffect"
+			// {
+			// 	"EffectName"			"particles/items_fx/black_king_bar_avatar.vpcf"
+			// 	"EffectAttachType"		"follow_origin"
+			// 	"Target"				"CASTER"
+			// 	"Duration"				"%duration"
+			// }
+		}
+
+		"Modifiers"
+		{
+			"modifier_mjz_invincible_potion_effect"
+			{
+				"Passive"           "0"
+				"IsHidden"          "1"
+				"IsDebuff"          "0"
+
+				"StatusEffectName"				"particles/status_fx/status_effect_avatar.vpcf"
+				"StatusEffectPriority"  		"10"
+		
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						// "EffectName"			"particles/items_fx/black_king_bar_avatar.vpcf"
+						"EffectName"	"particles/econ/items/omniknight/omni_ti8_head/omniknight_repel_buff_ti8_swoosh.vpcf"
+						"EffectAttachType"  	"follow_origin"
+						"Target"            	"CASTER"
+					}
+				}
+			}
+		}
+	}
+	
+	
+}

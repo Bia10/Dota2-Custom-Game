@@ -21,11 +21,12 @@
 
 ### 消耗
 
-| 名称                                        | 说明     |
-| ------------------------------------------- | -------- |
-| [属性增强书](Item/books_of_stats/README.md) | 属性提高 |
-| [极速兔子](Item/speed_rabbit/README.md)     | 提高移速 |
-|                                             |          |
+| 名称                                               | 说明     |
+| -------------------------------------------------- | -------- |
+| [属性增强书](Item/books_of_stats/README.md)        | 属性提高 |
+| [极速兔子](Item/speed_rabbit/README.md)            | 提高移速 |
+| [重生十字架](Item/mjz_reincarnate_stone/README.md) | 原地复活 |
+| [无敌药水](Item/mjz_invincible_potion/README.md)   | 无敌时间 |
 
 
 
@@ -50,7 +51,6 @@
 | [迅速的黑皇杖](Item/black_king_bar_faster/README.md) | 冷却时间更短     |
 | [神之盾](Item/god_shield/README.md)                  | 穷鬼盾           |
 | [魔法护盾](Item/mana_shield/README.md)               | 消耗魔法抵挡伤害 |
-| [重生十字架](Item/mjz_reincarnate_stone/README.md)   | 原地复活         |
 
 
 
@@ -72,7 +72,6 @@
 | [月光宝盒](Item/moonlight_treasure_box/README.md) | 时光倒流 |
 | [天鹰之戒](Item/ring_of_aquila/README.md)         | 嗯       |
 | [种树器](Item/branches_machine/README.md)         | 植树造林 |
-|                                                   |          |
 
 
 
