@@ -50,6 +50,7 @@
 | [迅速的黑皇杖](Item/black_king_bar_faster/README.md) | 冷却时间更短     |
 | [神之盾](Item/god_shield/README.md)                  | 穷鬼盾           |
 | [魔法护盾](Item/mana_shield/README.md)               | 消耗魔法抵挡伤害 |
+| [重生十字架](Item/mjz_reincarnate_stone/README.md)   | 原地复活         |
 
 
 

@@ -1,0 +1,73 @@
+"DOTAAbilities"
+{
+
+	//=================================================================================================================
+	// Ressurection Stone				//重生十字架
+	//=================================================================================================================
+	"item_mjz_reincarnate_stone"
+	{
+		"ID"							"80001"
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		// "Model"							"models/props_gameplay/tombstonea01.vmdl"
+		"Model"							"models/props_gameplay/tombstoneb01.vmdl"
+		"Effect"						"particles/econ/courier/courier_greevil_green/courier_greevil_green_ambient_3.vpcf"
+		"AbilityTextureName"			"mjz_reincarnate_stone"
+
+		// Stats
+		"AbilityCastRange"				"100"
+		
+		// Item Info
+		"ItemCost"						"500"
+		"ItemShopTags"					"consumable"
+		"ItemAliases"					"ressurection;rebirth;ressurection stone"
+		// "ItemQuality"					"epic"
+		// "ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
+		"ItemSellable"                  "0"
+		"ItemKillable"					"1"
+		"AllowedInBackpack"				"0"
+		"ItemStockInitial"		        "0"
+		"ItemStockTime"                 "5"
+		"ItemInitialStockTime"	        "0"
+		"ItemStockMax"                  "10"
+
+		"precache"
+		{
+			"soundfile"		"soundevents/music/game_sounds_stingers_main.vsndevts"
+			"soundfile"		"sounds/music/stingers/reincarnate.vsnd"
+			"particle"		"particles/items_fx/aegis_respawn.vpcf"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"						//复活所需时间
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_time"				"3"
+			}
+			"02"						//是否原地复活
+			{
+				"var_type"				"FIELD_INTEGER" //"FIELD_BOOLEAN"
+				"respawn_origin"		"1"
+			}
+		}
+
+		"OnOwnerDied"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/item_mjz_reincarnate_stone.lua"
+				"Function"				"Ressurection"
+				"cast_time"				"%cast_time"
+				"respawn_origin"		"%respawn_origin"
+			}
+		}
+	}
+	
+	
+}
