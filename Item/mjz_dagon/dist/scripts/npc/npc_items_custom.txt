@@ -55,7 +55,7 @@
 		"ShouldBeSuggested"				"1"
 		
 
-		"particle"
+		"precache"
 		{
 			"particle"					"particles/items_fx/dagon.vpcf"
 		}

@@ -64,7 +64,7 @@
 		"ItemAliases"					"mjz;frostmourne"
 		"ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
 
-		"particle"
+		"precache"
 		{
 			//物品在地上时的模型
 			"Model"			"models/items/abaddon/demonedge_weapon/demonedge_weapon.vmdl"
