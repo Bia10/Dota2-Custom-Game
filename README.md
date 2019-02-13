@@ -61,6 +61,7 @@
 | [莱恩的大根](Item/mjz_dagon/README.md)                       | 主动：死亡之指，每次成功击杀英雄都会提升威力 |
 | [比干的七巧玲珑心](Item/bigan_octarine_core/README.md)       | 冷却减少更多                                 |
 | [人工合成的阿哈利姆神杖](Item/aghanim's_scepter_synth/README.md) | 能吃的A杖                                    |
+| [幸运羊刀](Item/mjz_luck_sheepstick/README.md)               | 看运气                                       |
 
 
 

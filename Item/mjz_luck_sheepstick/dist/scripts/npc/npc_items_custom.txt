@@ -1,0 +1,205 @@
+"DOTAAbilities"
+{
+
+	//=================================================================================================================
+	// Luck Sheepstick					幸运羊刀
+	//=================================================================================================================
+	"item_mjz_luck_sheepstick"
+	{
+		"ID"							"70296"
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"2"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityTextureName"			"mjz_luck_sheepstick"
+
+		// Stats
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.0"
+
+		// Stats		
+		"AbilityCooldown"				"12.0"
+
+		// Item Info
+		"AbilityManaCost"				"50"
+		"ItemCost"						"900"
+		"ItemShopTags"					"int;regen_mana;agi;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"mjz;hex;sheepstick;scythe of vyse"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+
+		"precache"
+		{
+			"model"		"models/props_gameplay/frog.vmdl"
+			"model"		"models/props_gameplay/chicken.vmdl"
+			"model"		"models/props_gameplay/pig.vmdl"
+			"model"		"models/items/hex/sheep_hex/sheep_hex.vmdl"
+			"model"		"models/items/hex/sheep_hex/sheep_hex_gold.vmdl"
+			"model"		"models/courier/navi_courier/navi_courier.vmdl"
+
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_shadowshaman.vsndevts"
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+			"soundfile"		"sounds/weapons/hero/lion/lion_voodoo.vsnd"
+			"particle"		"particles/units/heroes/hero_lion/lion_spell_voodoo.vpcf"
+		}
+
+		// Special	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"5"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"5"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"1.25"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sheep_duration"		"3.2"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sheep_movement_speed"	"140"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_range"			"800"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sheep_chance"			"68"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"1.25"	
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance_scepter"		"10"	
+			}
+		}
+
+		"OnSpellStart"
+		{
+			// "FireSound"
+			// {
+			// 	"EffectName"	"Hero_Lion.Voodoo"
+			// 	"Target"		"TARGET"
+			// }
+
+			// "FireSound"
+			// {
+			// 	"EffectName"	"Hero_Lion.Hex.Target"
+			// 	"Target"		"TARGET"
+			// }
+			// "FireEffect"
+			// {
+			// 	"EffectName"		"particles/units/heroes/hero_lion/lion_spell_voodoo.vpcf"
+			// 	"EffectAttachType"	"follow_origin"
+			// 	"Target"			"TARGET"
+			// }
+
+			"RunScript"
+			{
+				"ScriptFile"	"items/item_mjz_luck_sheepstick.lua"
+				"Function"		"hex"
+			}				
+		}
+
+		"Modifiers"
+		{
+			"modifier_mjz_luck_sheepstick"
+			{
+				"Passive"				"1"
+				"IsDebuff"				"0"
+				"IsHidden"				"1"
+				"IsPurgable"        	"0"  //这个Modifier能否被净化
+				"Attributes" 			"MODIFIER_ATTRIBUTE_MULTIPLE"	//叠加
+	
+				"EffectAttachType"		"follow_origin"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_strength"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_agility"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_intellect"
+					// "MODIFIER_PROPERTY_MANA_BONUS"					"%bonus_mana"				//魔法值加成		
+					// "MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_health"				//生命值加成     
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"			"%bonus_mana_regen"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"		"%bonus_health_regen"	
+
+				}
+			}
+
+			"modifier_mjz_luck_sheepstick_target"
+			{
+				"IsHidden"				"0"
+				"IsDebuff"				"1"
+				"IsPurgable"        	"1"  //这个Modifier能否被净化
+				"Attributes" 			"MODIFIER_ATTRIBUTE_MULTIPLE"	//叠加
+		
+				// "StatusEffectName" 		"particles/status_fx/status_effect_ghost.vpcf"
+				// "StatusEffectPriority" 	"15"
+				"EffectName"			"particles/units/heroes/hero_lion/lion_spell_voodoo.vpcf"
+				"EffectAttachType"		"follow_origin"
+		
+				"TextureName"			"item_mjz_luck_sheepstick"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BASE_OVERRIDE" 			"%sheep_movement_speed" 
+				}
+				"States"
+				{
+					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_HEXED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MUTED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_EVADE_DISABLED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_BLOCK_DISABLED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_SILENCED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+
+			"modifier_mjz_luck_sheepstick_model_frog"
+			{
+				"IsHidden"			"1"
+				"IsDebuff"			"1"
+				"IsPurgable"        "1"  //这个Modifier能否被净化
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"	//叠加
+
+				"TextureName"		"item_mjz_ethereal_blade_blue"
+				"ModelName" 		"models/props_gameplay/frog.vmdl"
+				"OnCreated"
+				{
+					"MODIFIER_PROPERTY_MODEL_CHANGE" "models/props_gameplay/frog.vmdl"
+				}	
+			}
+		}
+	}
+
+	
+	
+}
