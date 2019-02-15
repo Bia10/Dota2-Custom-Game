@@ -1,7 +1,7 @@
 "DOTAAbilities"
 {
 
-		//=================================================================================================================
+	//=================================================================================================================
 	// Recipe: Mana Shield				魔法盾
 	//=================================================================================================================
 	"item_recipe_mjz_mana_shield"
@@ -134,8 +134,12 @@
 				"ModifierName"		"modifier_mjz_mana_shield_effect"
 				"Target" 			"CASTER"
 			}
+			"RunScript"
+			{
+				"ScriptFile"		"items/item_mjz_mana_shield.lua"
+				"Function"			"OnToggleOn"
+			}
 		}
-
 		"OnToggleOff"
 		{
 			"FireSound"
@@ -160,6 +164,11 @@
 					"Flags" 		"DOTA_UNIT_TARGET_FLAG_DEAD"
 				}
 			}
+			"RunScript"
+			{
+				"ScriptFile"		"items/item_mjz_mana_shield.lua"
+				"Function"			"OnToggleOff"
+			}
 		}
 
 		"OnEquip"			//戴上这件物品
@@ -181,6 +190,24 @@
 			}
 		}
 		
+		"OnOwnerSpawned"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"items/item_mjz_mana_shield.lua"
+				"Function"			"OnOwnerSpawned"
+				"ModifierName"		"modifier_mjz_mana_shield_effect"
+			}				
+		}
+		"OnOwnerDied"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"items/item_mjz_mana_shield.lua"
+				"Function"			"OnOwnerDied"
+				"ModifierName"		"modifier_mjz_mana_shield_effect"
+			}
+		}
 
 		"Modifiers"
 		{
@@ -217,7 +244,7 @@
 		
 				"EffectName"		"particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"
 				"EffectAttachType"	"follow_origin"
-		
+
 				"OnTakeDamage"
 				// "%attack_damage" is set to the damage value after mitigation
 				{
@@ -247,7 +274,5 @@
 			}
 		}
 	}
-
-
 	
 }

@@ -21,7 +21,7 @@ function ManaShield( event )
 
 	-- If it doesnt then do the HP calculation
 	if oldHealth >= 1 then
-		print("Damage taken "..damage.." | Mana needed: "..mana_needed.." | Current Mana: "..caster_mana)
+		-- print("Damage taken "..damage.." | Mana needed: "..mana_needed.." | Current Mana: "..caster_mana)
 
 		-- If the caster has enough mana, fully heal for the damage done
 		if mana_needed <= caster_mana then
@@ -57,8 +57,34 @@ function OnEquip( keys )        -- 戴上这件物品
         ability:ApplyDataDrivenModifier(caster, caster, modifier_name, nil)
     end
 end
-
 function OnUnequip( keys )      -- 脱下这件物品
     local modifier_name = keys.ModifierName
     keys.caster:RemoveModifierByName(modifier_name)
 end
+
+function OnOwnerSpawned( keys )        -- 诞生、重生
+    local caster = keys.caster
+	local ability = keys.ability
+	if caster.is_open_mana_shield then
+		ability:ToggleAbility()
+    end
+end
+function OnOwnerDied( keys )      		--死亡
+    local caster = keys.caster
+	local ability = keys.ability
+end
+
+function OnToggleOn( keys )
+	local caster = keys.caster
+	local ability = keys.ability
+	caster.is_open_mana_shield = true
+end
+function OnToggleOff( keys )
+	local caster = keys.caster
+	local ability = keys.ability
+	if caster:IsAlive() then
+		caster.is_open_mana_shield = false
+	end
+end
+
+
