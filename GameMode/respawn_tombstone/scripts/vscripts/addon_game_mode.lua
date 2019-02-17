@@ -1,8 +1,13 @@
 
 
+function Precache( context )
+	PrecacheItemByNameSync( "item_tombstone", context )
+end
+
+
 function CAddonTemplateGameMode:InitGameMode()
 
-	-- 不能自动重生
+	-- 不能自动重生，死亡墓碑上显示玩家名字
 	-- GameRules:SetHeroRespawnEnabled( false )
 
 	
