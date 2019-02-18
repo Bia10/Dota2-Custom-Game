@@ -17,7 +17,7 @@ function OnSpellStart( keys )
     local abilityLevel = ability:GetLevel() -1
 
 
-	
+	local ability_lifesteal_percent = ability:GetLevelSpecialValueFor("strike_lifesteal_percent", abilityLevel)
 	local ability_range = ability:GetLevelSpecialValueFor("strike_cast_range", abilityLevel)
 	local ability_radius = ability:GetLevelSpecialValueFor("strike_radius", abilityLevel)
 	local ability_duration = 1 --ability:GetLevelSpecialValueFor("ability_duration", abilityLevel)
@@ -99,7 +99,16 @@ function OnSpellStart( keys )
         ability:ApplyDataDrivenModifier(caster, unit, debuff_name, {Duration = debuff_duration})
         
         -- Applies the damage to the target        
-		ApplyDamage({victim = unit, attacker = caster, damage = damage, damage_type = ability:GetAbilityDamageType()})
+        local true_damage = ApplyDamage({victim = unit, attacker = caster, damage = damage, damage_type = ability:GetAbilityDamageType()})
+        
+        local max_health = caster:GetMaxHealth()
+        local current_health = caster:GetHealth()
+        local increase_health = true_damage * ability_lifesteal_percent * 0.01
+        if (current_health + increase_health) > max_health then
+            caster:SetHealth(max_health)  
+        else 
+            caster:SetHealth(current_health + increase_health)  
+        end
     end
     
 	ability.startPos = startPos
@@ -107,5 +116,4 @@ function OnSpellStart( keys )
     ability.direction = direction
     
 end
-
 

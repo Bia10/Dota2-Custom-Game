@@ -129,7 +129,11 @@
 				"var_type"					"FIELD_INTEGER"
 				"slow_duration"				"2"
 			}
-
+			"13"							//棒击大地.吸血百分比
+			{
+				"var_type"					"FIELD_INTEGER"
+				"strike_lifesteal_percent"			"25"
+			}
 
 		}
 
