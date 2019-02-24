@@ -1,7 +1,6 @@
 --[[	Author: d2imba
 		Date:	19.11.2016	]]
 
-require("depend.item_aghanim_timers")
 
 
 function AghanimsSynthCast( keys )
@@ -30,7 +29,7 @@ function AghanimsSynthCast( keys )
 	-- Create a regular scepter for one game frame to prevent regular dota interactions from going bad
 	local dummy_scepter = CreateItem("item_ultimate_scepter", caster, caster)
 	caster:AddItem(dummy_scepter)
-	ItemAghanimTimers:CreateTimer(0.01, function()
+	Timers:CreateTimer(0.01, function()
 		caster:RemoveItem(dummy_scepter)
 	end)
 end

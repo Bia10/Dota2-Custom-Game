@@ -1,28 +1,21 @@
-"DOTAAbilities"
-{
-
 
     //=================================================================================================================
 	// Recipe: Aghanim's Synth      人工合成的阿哈利姆神杖  配方
 	//=================================================================================================================
 	"item_recipe_imba_ultimate_scepter_synth"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"99993"
 		"BaseClass"						"item_datadriven"
 		"AbilityTextureName" 			"recipe"
 		"Model"							"models/props_gameplay/recipe.mdl"
         //"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
 		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
+		
 		"ItemCost"						"800"
 		"ItemShopTags"					""
 		"ItemPurchasable"				"1"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE" 
 
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_imba_ultimate_scepter_synth"
 		"ItemRequirements"
@@ -37,8 +30,6 @@
 	//=================================================================================================================
 	"item_imba_ultimate_scepter_synth"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"99992"
 		"AbilityTextureName" 			"imba_ultimate_scepter_synth"
 		"BaseClass"						"item_datadriven"
@@ -49,12 +40,10 @@
         "Effect"						"particles/dazzle_dark_shallow_grave_blue.vpcf"
 
 		// Stats
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"0"
 		"AbilityCastPoint"				"0.0"
 
 		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"12200"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
@@ -69,7 +58,6 @@
         "ItemShareability"				"ITEM_FULLY_SHAREABLE" 
 
 		// Special
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
 			"01"
@@ -144,5 +132,3 @@
 		}
 	}
 
-
-}
