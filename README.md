@@ -40,6 +40,7 @@
 | [真正的金箍棒](Item/real_monkey_king_bar/README.md) | 主动技能：棒击大地                         |
 | [霜之哀伤](Item/mjz_frostmourne/README.md)          | 大概算是一把神器                           |
 | [分裂箭](Item/split_shot/README.md)                 | 1 VS 5                                     |
+| [大炮 系列](Item/mjz_daedalus/README.md)            | 增加到五个等级，提高属性加成               |
 
 
 
