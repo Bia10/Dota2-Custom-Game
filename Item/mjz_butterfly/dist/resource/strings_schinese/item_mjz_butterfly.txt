@@ -1,0 +1,21 @@
+	
+
+		//>>>>	Red Butterfly
+		"DOTA_Tooltip_Ability_item_red_butterfly"                              		"红色的蝴蝶"
+		"DOTA_Tooltip_Ability_item_red_butterfly_Description"						"Stacks diminishingly with other sources of Evasion."
+		"DOTA_Tooltip_Ability_item_red_butterfly_Lore"								"只有最强大最老练的战士才能携带蝴蝶，但它也提供无可比拟的战斗灵活力作为回报。"
+		"DOTA_Tooltip_Ability_item_red_butterfly_bonus_strength"					"+$str"
+		"DOTA_Tooltip_Ability_item_red_butterfly_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_Ability_item_red_butterfly_bonus_evasion"						"%+$evasion"
+		"DOTA_Tooltip_Ability_item_red_butterfly_bonus_attack_speed"		    	"+$attack"
+		//<<<<
+		//>>>>	Blue Butterfly
+		"DOTA_Tooltip_Ability_item_blue_butterfly"                              	"蓝色的蝴蝶"
+		"DOTA_Tooltip_Ability_item_blue_butterfly_Description"						"Stacks diminishingly with other sources of Evasion."
+		"DOTA_Tooltip_Ability_item_blue_butterfly_Lore"								"只有最强大最老练的战士才能携带蝴蝶，但它也提供无可比拟的战斗灵活力作为回报。"
+		"DOTA_Tooltip_Ability_item_blue_butterfly_bonus_intellect"					"+$int"
+		"DOTA_Tooltip_Ability_item_blue_butterfly_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_Ability_item_blue_butterfly_bonus_evasion"					"%+$evasion"
+		"DOTA_Tooltip_Ability_item_blue_butterfly_bonus_attack_speed"		    	"+$attack"
+		//<<<<
+

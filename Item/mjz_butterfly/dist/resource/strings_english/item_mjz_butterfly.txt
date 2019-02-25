@@ -1,0 +1,20 @@
+	
+
+		//>>>>	Red Butterfly
+		"DOTA_Tooltip_Ability_item_red_butterfly"                              		"Red Butterfly"
+		"DOTA_Tooltip_Ability_item_red_butterfly_Description"						"Stacks diminishingly with other sources of Evasion."
+		"DOTA_Tooltip_Ability_item_red_butterfly_Lore"								"Only the mightiest and most experienced of warriors can wield the Butterfly, but it provides incredible dexterity in combat."
+		"DOTA_Tooltip_Ability_item_red_butterfly_bonus_strength"					"+$str"
+		"DOTA_Tooltip_Ability_item_red_butterfly_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_Ability_item_red_butterfly_bonus_evasion"						"%+$evasion"
+		"DOTA_Tooltip_Ability_item_red_butterfly_bonus_attack_speed"		    	"+$attack"
+		//<<<<
+		//>>>>	Blue Butterfly
+		"DOTA_Tooltip_Ability_item_blue_butterfly"                              	"Blue Butterfly"
+		"DOTA_Tooltip_Ability_item_blue_butterfly_Description"						"Stacks diminishingly with other sources of Evasion."
+		"DOTA_Tooltip_Ability_item_blue_butterfly_Lore"								"Only the mightiest and most experienced of warriors can wield the Butterfly, but it provides incredible dexterity in combat."
+		"DOTA_Tooltip_Ability_item_blue_butterfly_bonus_intellect"					"+$int"
+		"DOTA_Tooltip_Ability_item_blue_butterfly_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_Ability_item_blue_butterfly_bonus_evasion"					"%+$evasion"
+		"DOTA_Tooltip_Ability_item_blue_butterfly_bonus_attack_speed"		    	"+$attack"
+		//<<<<
