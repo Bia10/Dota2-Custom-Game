@@ -41,6 +41,7 @@
 | [霜之哀伤](Item/mjz_frostmourne/README.md)          | 大概算是一把神器                           |
 | [分裂箭](Item/split_shot/README.md)                 | 1 VS 5                                     |
 | [大炮 系列](Item/mjz_daedalus/README.md)            | 增加到五个等级，提高属性加成               |
+| [狂战斧 系列](Item/mjz_battlefury/README.md)        | 增加到五个等级，提高属性加成               |
 
 
 
