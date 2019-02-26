@@ -1,0 +1,16 @@
+	
+		//>>>> 幸运羊刀
+		"DOTA_Tooltip_Ability_item_mjz_luck_sheepstick"							"幸运羊刀"
+		"DOTA_Tooltip_Ability_item_mjz_luck_sheepstick_Description"				"<h1>主动：妖术</h1>将一个单位变成无害的小动物，持续%sheep_duration%秒。目标的基础移速变为%sheep_movement_speed%，并且被沉默、锁闭和缴械。 幻象会被立刻消灭。 施法距离：%tooltip_range%"		
+		"DOTA_Tooltip_Ability_item_mjz_luck_sheepstick_Lore"					""
+		"DOTA_Tooltip_Ability_item_mjz_luck_sheepstick_Note0"					"有神杖时，增加成功几率"
+		"DOTA_Tooltip_Ability_item_mjz_luck_sheepstick_bonus_agility"			"+$agi"
+		"DOTA_Tooltip_Ability_item_mjz_luck_sheepstick_bonus_intellect"			"+$int"
+		"DOTA_Tooltip_Ability_item_mjz_luck_sheepstick_bonus_strength"			"+$str"
+		"DOTA_Tooltip_Ability_item_mjz_luck_sheepstick_bonus_mana_regen"		"+$mana_regen"
+		"DOTA_Tooltip_Ability_item_mjz_luck_sheepstick_bonus_health_regen"		"+生命恢复"
+		"DOTA_Tooltip_Ability_item_mjz_luck_sheepstick_sheep_chance"			"%成功几率："
+		"DOTA_Tooltip_Ability_item_mjz_luck_sheepstick_chance_scepter"			"%神杖升级几率增加："	//_scepter 装备了神杖才看到
+		"DOTA_Tooltip_modifier_mjz_luck_sheepstick_target"						"幸运羊刀"
+		//<<<<
+

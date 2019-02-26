@@ -11,24 +11,26 @@ function hex( keys )
     local sheep_chance = ability:GetLevelSpecialValueFor("sheep_chance", ability_level)
     local chance_scepter = ability:GetLevelSpecialValueFor("chance_scepter", ability_level)
     
-    local ability_target = target
-    if caster:HasScepter() then     -- 有神杖时，增加成功几率
-        sheep_chance = sheep_chance + chance_scepter
-    end
-    if math.random(100) > sheep_chance then
-        ability_target = caster
-    end
-
-    -- EmitSoundOn("Hero_Lion.Voodoo", ability_target)
-    EmitSoundOn("DOTA_Item.Sheepstick.Activate", ability_target)
-    -- EmitSoundOn("Hero_Lion.Hex.Target", ability_target)
-	if ability_target:IsIllusion() then
-        ability_target:ForceKill(true)
-    else
-		ability:ApplyDataDrivenModifier(caster, ability_target, modifier_target, {duration = duration})
-        
-        local model_name = RandomChooseModel()        
-        ability_target:SetModel(model_name)
+    if IsServer() then
+		local ability_target = target
+		if caster:HasScepter() then     -- 有神杖时，增加成功几率
+			sheep_chance = sheep_chance + chance_scepter
+		end
+		if math.random(100) > sheep_chance then
+			ability_target = caster
+		end
+		
+        -- EmitSoundOn("Hero_Lion.Voodoo", ability_target)
+        EmitSoundOn("DOTA_Item.Sheepstick.Activate", ability_target)
+        -- EmitSoundOn("Hero_Lion.Hex.Target", ability_target)
+        if ability_target:IsIllusion() then
+            ability_target:ForceKill(true)
+        else
+            ability:ApplyDataDrivenModifier(caster, ability_target, modifier_target, {duration = duration})
+            
+            local model_name = RandomChooseModel()        
+            ability_target:SetModel(model_name)
+        end
     end
    
 end
