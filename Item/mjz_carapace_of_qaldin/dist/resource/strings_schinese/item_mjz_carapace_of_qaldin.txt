@@ -1,0 +1,13 @@
+
+
+		//>>>>	MJZ 卡尔丁甲壳
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin"							"<font color='#4ae0bf'>卡尔丁甲壳</font>"
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_Description"				"需要等级：%required_level% \n\n <h1>被动：酸性恢复</h1>所有获得的魔法和生命恢复效果加倍，而且所有受到的伤害会有一部分反弹给攻击者。\n"
+		// "DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_Description"				"团队价值：%item_value%<br>需要等级：%required_level%\n\n被动：酸性恢复 - 所有获得的魔法和生命恢复效果加倍，而且所有受到的伤害会有一部分反弹给攻击者。\n"
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_Lore"						"让他们攻击，每次都会有鲜血的代价。"
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_bonus_hp"					"额外生命值："
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_bonus_mana"				"额外魔法值："
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_bonus_restore_pct"		"%额外生命回复："
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_damage_return_pct"		"%伤害反弹："
+		"DOTA_Tooltip_Ability_item_recipe_mjz_carapace_of_qaldin"					"<font color='#4ae0bf'>卷轴：卡尔丁甲壳</font>"
+		//<<<<

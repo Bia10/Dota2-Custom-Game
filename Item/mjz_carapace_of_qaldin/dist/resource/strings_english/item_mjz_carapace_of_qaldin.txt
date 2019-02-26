@@ -1,0 +1,14 @@
+	
+
+
+		//>>>>	MJZ Carapace of Qaldin
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin"						"<font color='#4ae0bf'>Carapace of Qaldin</font>"
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_Description"			"Required Level: %required_level%\n\n<h1>Passive: Acidic Regeneration</h1>All mana and health gained are doubled, and a percentage of all damage taken is reflected back upon the attacker.\n"
+		// "DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_Description"			"Team Value: %item_value%\nRequired Level: %required_level%\n\nPassive: Acidic Regeneration - All mana and health gained are doubled, and a percentage of all damage taken is reflected back upon the attacker.\n"
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_Lore"					"Let them attack you, for each blow comes at a blood price."
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_bonus_hp"				"BONUS HP:"
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_bonus_mana"			"BONUS MANA:"
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_bonus_restore_pct"	"%BONUS HEALTH RESTORE:"
+		"DOTA_Tooltip_Ability_item_mjz_carapace_of_qaldin_damage_return_pct"	"%DAMAGE RETURNED:"
+		"DOTA_Tooltip_Ability_item_recipe_mjz_carapace_of_qaldin"				"<font color='#4ae0bf'>Recipe: Carapace of Qaldin</font>"
+		//<<<<
