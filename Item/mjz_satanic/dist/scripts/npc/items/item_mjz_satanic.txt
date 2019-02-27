@@ -28,6 +28,7 @@
 	{
 		"ID"							"71156"
 		"BaseClass"						"item_satanic"
+		"AbilityTextureName"		    "mjz_satanic"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"FightRecapLevel"				"2"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
@@ -112,6 +113,7 @@
 	{
 		"ID"							"71158"
 		"BaseClass"						"item_satanic"
+		"AbilityTextureName"		    "mjz_satanic"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"FightRecapLevel"				"2"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
@@ -196,6 +198,7 @@
 	{
 		"ID"							"71160"
 		"BaseClass"						"item_satanic"
+		"AbilityTextureName"		    "mjz_satanic"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"FightRecapLevel"				"2"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
@@ -280,6 +283,7 @@
 	{
 		"ID"							"71162"
 		"BaseClass"						"item_satanic"
+		"AbilityTextureName"		    "mjz_satanic"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"FightRecapLevel"				"2"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
