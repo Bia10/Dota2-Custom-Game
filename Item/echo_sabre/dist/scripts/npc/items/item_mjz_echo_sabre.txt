@@ -1,5 +1,3 @@
-"DOTAAbilities"
-{
 
 	//==================================================================
 	// Echo Sabre		回音战刃
@@ -27,6 +25,7 @@
 		"FightRecapLevel"				"1"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"BaseClass"						"item_echo_sabre"
+		"AbilityTextureName"			"mjz_echo_sabre"
 
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"4.0"
@@ -88,7 +87,6 @@
 			}
 		}
 	}
-
 	"item_recipe_echo_sabre_3"
 	{
 		"ID"							"70096"
@@ -112,6 +110,7 @@
 		"FightRecapLevel"				"1"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"BaseClass"						"item_echo_sabre"
+		"AbilityTextureName"			"mjz_echo_sabre"
 
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"3.0"
@@ -173,7 +172,6 @@
 			}
 		}
 	}
-
 	"item_recipe_echo_sabre_4"
 	{
 		"ID"							"70098"
@@ -196,6 +194,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"BaseClass"						"item_echo_sabre"
+		"AbilityTextureName"			"mjz_echo_sabre"
 
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"2.0"
@@ -257,13 +256,12 @@
 			}
 		}
 	}
-
 	"item_recipe_echo_sabre_5"
 	{
 		"ID"							"70100"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"BaseClass"						"item_recipe_echo_sabre"
-
+		
 		"ItemCost"						"0"	
 		"ItemShopTags"					""
 
@@ -280,7 +278,8 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"BaseClass"						"item_echo_sabre"
-
+		"AbilityTextureName"			"mjz_echo_sabre"
+		
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"1.0"
 
@@ -343,4 +342,3 @@
 	}
 
 	
-}

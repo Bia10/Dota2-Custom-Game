@@ -2,7 +2,7 @@
 
 
 
-![mjz_blink_dagger](src/icon/Echo_Sabre_icon.png)
+![mjz_blink_dagger](src/icon/mjz_echo_sabre.png)
 
 名称：回音战刃
 
