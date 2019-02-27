@@ -1,20 +1,26 @@
 
 
 function FrostmourneRuin(event)
-
+	if IsServer() then
+        -- body
+    end
 end
 
 -- TODO: 有BUG，死亡时不一定掉落
 function DropFrostmourne(event)
-    local killedUnit = EntIndexToHScript( event.caster_entindex )
+    if IsServer() then
+        local killedUnit = EntIndexToHScript( event.caster_entindex )
 
-    if not killedUnit:IsAlive() then 
-        DropItemOnDeath(event)
+        if not killedUnit:IsAlive() then 
+            DropItemOnDeath(event)
+        end
     end
 end
 
 function FrostmourneAttack(event)
-
+    if IsServer() then
+        -- body
+    end
 end
 
 function HealthAttack( event )
