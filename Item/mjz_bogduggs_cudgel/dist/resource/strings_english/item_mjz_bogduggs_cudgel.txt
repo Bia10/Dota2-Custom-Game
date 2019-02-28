@@ -1,0 +1,14 @@
+	
+
+
+		//>>>>	MJZ Bogdugg's Cudgel
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel"							"<font color='#4ae0bf'>Bogdugg's Cudgel</font>"
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_Description"				"Required Level: %required_level%\n\n<h1>Passive: Smash<h2>MELEE ONLY. All attack speed is reduced by %attack_speed_penalty_pct%%%, but attacks deal splash damage in a %damage_radius% area around the target and stun for %stun_duration% second.\nBonus Strength: <font color='#FF1800'>%bonus_strength_level_0% + %bonus_strength_per_level% x Relic Level</font><br>Bonus Attack Damage: <font color='#FF1800'>%bonus_damage_level_0% + %bonus_damage_per_level% x Relic Level</font>"
+		// "DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_Description"				"Team Value: %item_value%\nRequired Level: %required_level%\n\n<h1>Passive: Smash<h2>MELEE ONLY. All attack speed is reduced by %attack_speed_penalty_pct%%%, but attacks deal splash damage in a %damage_radius% area around the target and stun for %stun_duration% second.\nBonus Strength: <font color='#FF1800'>%bonus_strength_level_0% + %bonus_strength_per_level% x Relic Level</font><br>Bonus Attack Damage: <font color='#FF1800'>%bonus_damage_level_0% + %bonus_damage_per_level% x Relic Level</font>"
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_Lore"					"Bogdugg came to lord over Bonemeal Ridge by carrying the biggest stick."
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_bonus_strength"			"+$str"
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_bonus_agility"			"+$agi"
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_bonus_damage"			"+$damage"
+
+		"DOTA_Tooltip_Ability_item_recipe_mjz_bogduggs_cudgel"				"<font color='#4ae0bf'>Recipe: Bogdugg's Cudgel</font>"
+		//<<<<

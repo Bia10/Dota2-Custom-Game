@@ -1,0 +1,119 @@
+
+	//=================================================================================================================
+	// Bogdugg's Cudgel
+	//=================================================================================================================
+	"item_mjz_bogduggs_cudgel"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"mjz_bogduggs_cudgel"
+		"ScriptFile"					"items/item_mjz_bogduggs_cudgel"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// "DungeonItemDef"				"12045"
+		// "DungeonAction"					"dungeon_in_game_item_12045"
+		// "DungeonCurrencyCost"			"45"
+
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		"ItemCost"						"4900"
+		"ItemPurchasable"				"1"
+		"ItemQuality"					"epic"
+		"ItemStackable"					"0"
+		"ItemSellable"					"1"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"1"
+		// "ItemDisplayOwnership"			"1"
+		// "CustomShop"					"1"
+		"ItemBaseLevel"					"25"
+		"MaxUpgradeLevel"				"50"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"	//可以拆分
+
+		"precache"
+		{
+			"soundfile"		"sounds/weapons/hero/leshrac/split_earth.vsnd"
+			"particle"		"particles/test_particle/ogre_melee_smash.vpcf"
+			"particle" 		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"required_level"				"1"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"bonus_strength_level_0"		"5"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"bonus_strength_per_level"		"0.3"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"bonus_damage_level_0"			"10"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"bonus_damage_per_level"		"0.4"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"base_attack_time_penalty_pct"	"40"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"attack_speed_penalty_pct"		"40"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_radius"					"295"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"stun_duration"					"0.4"
+			}
+			"10"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"item_value"					"100"
+			}
+		}
+	}
+	"item_recipe_mjz_bogduggs_cudgel"
+	{
+		"ID"							"1993"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"recipe"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		
+		"ItemCost"						"950"
+		"ItemShopTags"					""
+		"ItemPurchasable"				"1"
+        "ItemShareability"				"ITEM_FULLY_SHAREABLE" 
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjz_bogduggs_cudgel"
+		"ItemRequirements"
+		{
+			"01"						"item_basher;item_ogre_axe"
+		}
+	}
+

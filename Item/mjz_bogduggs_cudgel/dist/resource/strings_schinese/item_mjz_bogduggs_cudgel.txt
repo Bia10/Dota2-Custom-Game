@@ -1,0 +1,13 @@
+
+
+		//>>>>	MJZ 波格达格的巨棍
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel"						"<font color='#4ae0bf'>波格达格的巨棍</font>"
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_Description"			"需要等级：%required_level%\n\n<h1>被动：粉碎</h1>近战英雄有效。所有攻击速度减少%attack_speed_penalty_pct%%%，但是攻击在目标%damage_radius%范围内造成溅射伤害，并且眩晕%stun_duration%秒。\n额外力量：<font color='#FF1800'>%bonus_strength_level_0% + %bonus_strength_per_level% x 宝物等级</font><br>攻击力加成：<font color='#FF1800'>%bonus_damage_level_0% + %bonus_damage_per_level% x 宝物等级</font>"
+		// "DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_Description"			"团队价值：%item_value%<br>需要等级：%required_level%\n\n<h1>被动：粉碎</h1>近战英雄有效。所有攻击速度减少%attack_speed_penalty_pct%%%，但是攻击在目标%damage_radius%范围内造成溅射伤害，并且眩晕%stun_duration%秒。\n额外力量：<font color='#FF1800'>%bonus_strength_level_0% + %bonus_strength_per_level% x 宝物等级</font><br>攻击力加成：<font color='#FF1800'>%bonus_damage_level_0% + %bonus_damage_per_level% x 宝物等级</font>"
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_Lore"				"波格达格提着最大的棍子来骨末山脊称王。"
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_bonus_strength"		"+$str"
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_bonus_agility"		"+$agi"
+		"DOTA_Tooltip_Ability_item_mjz_bogduggs_cudgel_bonus_damage"		"+$damage"
+
+		"DOTA_Tooltip_Ability_item_recipe_mjz_bogduggs_cudgel"				"<font color='#4ae0bf'>卷轴：波格达格的巨棍</font>"
+		//<<<<
