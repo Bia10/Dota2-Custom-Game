@@ -87,6 +87,7 @@
 | [雷神之锤 系列](Item/mjz_mjollnir/README.md)        | 增加到五个等级，提高属性加成                         |
 | [卡尔丁甲壳](Item/mjz_carapace_of_qaldin/README.md) | 生命恢复效果加强，所有受到的伤害会反弹一部分给攻击者 |
 | [坚韧之颅](Item/mjz_preserved_skull/README.md)      | 友军获得额外的魔法恢复速率和冷却时间减少。           |
+| [慧光 系列](Item/mjz_kaya/README.md)                | 增加到五个等级，提高属性加成                         |
 
 
 
