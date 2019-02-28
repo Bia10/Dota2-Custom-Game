@@ -47,6 +47,7 @@
 | [虚灵之刃](Item/mjz_ethereal_blade/README.md)       | 分别三种不同属性加成的虚灵之刃，一共两等级 |
 | [红色的圣剑](Item/red_divine_rapier/README.md)      | 武器增加到五个等级，死亡后不会掉落         |
 | [红色蝴蝶、蓝色蝴蝶](Item/mjz_butterfly/README.md)  | 分别两种不同属性加成的蝴蝶                 |
+| [金箍棒 系列](Item/mjz_monkey_king_bar/README.md)   | 增加到五个等级，提高属性加成               |
 | [真正的金箍棒](Item/real_monkey_king_bar/README.md) | 主动技能：棒击大地                         |
 | [霜之哀伤](Item/mjz_frostmourne/README.md)          | 大概算是一把神器                           |
 | [分裂箭](Item/split_shot/README.md)                 | 1 VS 5                                     |
