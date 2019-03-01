@@ -1,8 +1,6 @@
-"DOTAAbilities"
-{
 
 	//=================================================================================================================
-	// Dagon							达贡之神力
+	// Lion's Dagon							莱恩的大根
 	//=================================================================================================================
 	"item_recipe_mjz_dagon"
 	{
@@ -70,7 +68,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_all_stats"			"3"
+				"bonus_all_stats"			"5"
 			}
 			"03"
 			{
@@ -106,6 +104,16 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"kill_grace_duration"		"10"
+			}		
+			"20"							//击杀普通单位是否会伤害加成（大于0，表示开启）
+			{
+				"var_type"					"FIELD_INTEGER"
+				"creature_enabled"			"1"
+			}
+			"21"							//击杀普通单位的血量总值超过指定值，才算一层；不超过就累计击杀血量值
+			{
+				"var_type"					"FIELD_INTEGER"
+				"creature_health"			"1500"
 			}
 			
 		}
@@ -118,6 +126,25 @@
 				"Function"			"OnSpellStart"
 				"Damage"			"%damage"
 				"ModifierDeath"		"modifier_item_mjz_dagon_kill_counter"
+			}
+		}
+
+		"OnEquip"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/item_mjz_dagon.lua"
+				"Function"				"OnEquip"
+				"ModifierTooltip"		"modifier_item_mjz_dagon_tooltip"
+			}
+		}
+		"OnUnequip"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/item_mjz_dagon.lua"
+				"Function"				"OnUnequip"
+				"ModifierTooltip"		"modifier_item_mjz_dagon_tooltip"
 			}
 		}
 
@@ -156,7 +183,13 @@
 					}
 				}
 			}
+
+			"modifier_item_mjz_dagon_tooltip"
+			{
+				"IsHidden"			"0"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"TextureName"		"item_mjz_dagon"
+			}
 		}
 	}
 	
-}

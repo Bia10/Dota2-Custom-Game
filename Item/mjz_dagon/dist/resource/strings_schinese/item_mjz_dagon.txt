@@ -1,0 +1,20 @@
+
+
+		//>>>>	达贡之神力（大根）
+		"DOTA_Tooltip_Ability_item_mjz_dagon"										"莱恩的大根"
+		"DOTA_Tooltip_Ability_item_mjz_dagon_Description"							"<h1>主动：死亡之指</h1>撕裂一个敌方单位，将其折磨得死去活来，并造成巨大伤害。每次成功击杀英雄都会提升威力。\n可用神杖升级。"
+		"DOTA_Tooltip_Ability_item_mjz_dagon_Lore"									"莱恩的大根正是他最强大力量的来源，能够用恶魔的力量让受害者完全崩溃。"
+		"DOTA_Tooltip_Ability_item_mjz_dagon_bonus_intellect"						"+$int"
+		"DOTA_Tooltip_Ability_item_mjz_dagon_bonus_all_stats"						"+$all"
+		"DOTA_Tooltip_Ability_item_mjz_dagon_damage"								"基础伤害："
+		"DOTA_Tooltip_Ability_item_mjz_dagon_range_tooltip"							"技能范围："
+		"DOTA_Tooltip_Ability_item_mjz_dagon_damage_per_kill"						"每次击杀伤害加成："
+		"DOTA_Tooltip_Ability_item_mjz_dagon_kill_grace_duration"					"击杀计算时间："
+		"DOTA_Tooltip_Ability_item_mjz_dagon_splash_radius_scepter"					"神杖升级溅射范围："	//_scepter 装备了神杖才看到
+		"DOTA_Tooltip_Ability_item_mjz_dagon_creature_health"						"普通单位最小血量累积："
+		"DOTA_Tooltip_modifier_item_mjz_dagon_kill_counter"							"莱恩的大根"
+		"DOTA_Tooltip_modifier_item_mjz_dagon_kill_counter_Description"				"被击杀后，攻击者会提升技能威力。"
+		"DOTA_Tooltip_modifier_item_mjz_dagon_tooltip"								"莱恩的大根 击杀数"
+		"DOTA_Tooltip_modifier_item_mjz_dagon_tooltip_Description"					"成功击杀后提升伤害"
+		//<<<<
+
