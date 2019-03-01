@@ -1,0 +1,436 @@
+
+
+	//=================================================================================================================
+	// Recipe: Bloodstone				血精石 LVL 2
+	//=================================================================================================================
+	"item_recipe_mjz_bloodstone_2"
+	{
+		"ID"							"120"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"BaseClass"						"item_datadriven"
+		
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjz_bloodstone_2"
+		"ItemRequirements"
+		{
+			"01"						"item_bloodstone;item_bloodstone"
+		}
+	}
+	"item_mjz_bloodstone_2"
+	{
+		"ID"							"121"
+		"BaseClass"						"item_bloodstone"
+		"AbilityTextureName"			"mjz_bloodstone"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"250.0"
+
+		"ItemCost"						"4900"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"	//可以拆分
+		"MaxUpgradeLevel"				"5"
+		"ItemBaseLevel"					"2"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"475 800 1200 1600 2000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"425 800 1200 1600 2000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"6.0 12 18 24 30"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"3.0 6 9 12 15"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana_regen_multiplier"		"200 350 500 650 800"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"regen_per_charge"		"0.3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"death_charges"				"3"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"kill_charges"			"1"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_range"			"1600"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"initial_charges_tooltip"	"14"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana_cost_percentage" 		"30"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"restore_duration" 			"2.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Bloodstone				血精石 LVL 3
+	//=================================================================================================================
+	"item_recipe_mjz_bloodstone_3"
+	{
+		"ID"							"120"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"BaseClass"						"item_datadriven"
+		
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjz_bloodstone_3"
+		"ItemRequirements"
+		{
+			"01"						"item_mjz_bloodstone_2;item_bloodstone"
+		}
+	}
+	"item_mjz_bloodstone_3"
+	{
+		"ID"							"121"
+		"BaseClass"						"item_bloodstone"
+		"AbilityTextureName"			"mjz_bloodstone"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"250.0"
+
+		"ItemCost"						"4900"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"	//可以拆分
+		"MaxUpgradeLevel"				"5"
+		"ItemBaseLevel"					"3"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"475 800 1200 1600 2000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"425 800 1200 1600 2000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"6.0 12 18 24 30"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"3.0 6 9 12 15"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana_regen_multiplier"		"200 350 500 650 800"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"regen_per_charge"		"0.3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"death_charges"				"3"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"kill_charges"			"1"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_range"			"1600"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"initial_charges_tooltip"	"14"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana_cost_percentage" 		"30"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"restore_duration" 			"2.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Bloodstone				血精石 LVL 4
+	//=================================================================================================================
+	"item_recipe_mjz_bloodstone_4"
+	{
+		"ID"							"120"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"BaseClass"						"item_datadriven"
+		
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjz_bloodstone_4"
+		"ItemRequirements"
+		{
+			"01"						"item_mjz_bloodstone_3;item_bloodstone"
+		}
+	}
+	"item_mjz_bloodstone_4"
+	{
+		"ID"							"121"
+		"BaseClass"						"item_bloodstone"
+		"AbilityTextureName"			"mjz_bloodstone"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"250.0"
+
+		"ItemCost"						"4900"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"	//可以拆分
+		"MaxUpgradeLevel"				"5"
+		"ItemBaseLevel"					"4"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"475 800 1200 1600 2000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"425 800 1200 1600 2000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"6.0 12 18 24 30"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"3.0 6 9 12 15"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana_regen_multiplier"		"200 350 500 650 800"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"regen_per_charge"		"0.3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"death_charges"				"3"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"kill_charges"			"1"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_range"			"1600"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"initial_charges_tooltip"	"14"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana_cost_percentage" 		"30"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"restore_duration" 			"2.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Bloodstone				血精石 LVL 5
+	//=================================================================================================================
+	"item_recipe_mjz_bloodstone_5"
+	{
+		"ID"							"120"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"BaseClass"						"item_datadriven"
+		
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjz_bloodstone_5"
+		"ItemRequirements"
+		{
+			"01"						"item_mjz_bloodstone_4;item_bloodstone"
+		}
+	}
+	"item_mjz_bloodstone_5"
+	{
+		"ID"							"121"
+		"BaseClass"						"item_bloodstone"
+		"AbilityTextureName"			"mjz_bloodstone"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"250.0"
+
+		"ItemCost"						"4900"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"	//可以拆分
+		"MaxUpgradeLevel"				"5"
+		"ItemBaseLevel"					"5"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"475 800 1200 1600 2000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"425 800 1200 1600 2000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"6.0 12 18 24 30"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"3.0 6 9 12 15"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana_regen_multiplier"		"200 350 500 650 800"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"regen_per_charge"		"0.3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"death_charges"				"3"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"kill_charges"			"1"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_range"			"1600"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"initial_charges_tooltip"	"14"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mana_cost_percentage" 		"30"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"restore_duration" 			"2.0"
+			}
+		}
+	}
+
+
