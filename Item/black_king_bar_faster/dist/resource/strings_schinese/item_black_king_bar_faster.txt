@@ -1,0 +1,12 @@
+	
+
+		//>>>>	迅速的黑皇杖
+		"DOTA_Tooltip_Ability_item_black_king_bar_faster"	                        "迅速的黑皇杖"
+		"DOTA_Tooltip_ability_item_black_king_bar_faster_Description"				"<h1>主动：天神下凡</h1>获得技能免疫状态和的魔法抗性。持续时间每使用一次都会降低。"
+		"DOTA_Tooltip_ability_item_black_king_bar_faster_Lore"						"渗透了巨人之力的强大法杖。"
+		"DOTA_Tooltip_ability_item_black_king_bar_faster_bonus_strength"			"+$str"
+		"DOTA_Tooltip_ability_item_black_king_bar_faster_bonus_damage"				"+$damage"
+		"DOTA_Tooltip_ability_item_black_king_bar_faster_duration"					"持续时间："
+		"DOTA_Tooltip_modifier_black_king_bar_faster_ability"						"天神下凡"
+		"DOTA_Tooltip_modifier_black_king_bar_faster_ability_Description"			"获得技能免疫状态和的魔法抗性。持续时间每使用一次都会降低。"
+		//<<<<
