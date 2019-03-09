@@ -1,0 +1,37 @@
+
+		//>>>>	MJZ 强袭胸甲 LVL 2
+		"DOTA_Tooltip_Ability_item_mjz_assault_2"	                        "强袭胸甲 LVL 2"
+		"DOTA_Tooltip_ability_item_mjz_assault_2_Description"				"<h1>被动：强袭光环</h1>附近友军单位和建筑提升 %aura_attack_speed% 攻击速度和 %aura_positive_armor% 点护甲，削弱附近敌军 %aura_negative_armor% 点护甲。范围：%aura_radius%"
+		"DOTA_Tooltip_ability_item_mjz_assault_2_bonus_attack_speed"		"+攻击速度"
+		"DOTA_Tooltip_ability_item_mjz_assault_2_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_mjz_assault_2_Lore"						"在幽冥地带的深渊锻造，这件地狱盔甲提高整支军队的护甲和攻击速度。"
+		"DOTA_Tooltip_modifier_item_mjz_assault_2_buff"						"强袭胸甲 LVL 2"
+		"DOTA_Tooltip_modifier_item_mjz_assault_2_debuff"					"强袭胸甲 LVL 2"
+		//<<<<
+		//>>>>	MJZ 强袭胸甲 LVL 3
+		"DOTA_Tooltip_Ability_item_mjz_assault_3"	                        "强袭胸甲 LVL 3"
+		"DOTA_Tooltip_ability_item_mjz_assault_3_Description"				"<h1>被动：强袭光环</h1>附近友军单位和建筑提升 %aura_attack_speed% 攻击速度和 %aura_positive_armor% 点护甲，削弱附近敌军 %aura_negative_armor% 点护甲。范围：%aura_radius%"
+		"DOTA_Tooltip_ability_item_mjz_assault_3_bonus_attack_speed"		"+攻击速度"
+		"DOTA_Tooltip_ability_item_mjz_assault_3_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_mjz_assault_3_Lore"						"在幽冥地带的深渊锻造，这件地狱盔甲提高整支军队的护甲和攻击速度。"
+		"DOTA_Tooltip_modifier_item_mjz_assault_3_buff"						"强袭胸甲 LVL 3"
+		"DOTA_Tooltip_modifier_item_mjz_assault_3_debuff"					"强袭胸甲 LVL 3"
+		//<<<<
+		//>>>>	MJZ 强袭胸甲 LVL 4
+		"DOTA_Tooltip_Ability_item_mjz_assault_4"	                        "强袭胸甲 LVL 4"
+		"DOTA_Tooltip_ability_item_mjz_assault_4_Description"				"<h1>被动：强袭光环</h1>附近友军单位和建筑提升 %aura_attack_speed% 攻击速度和 %aura_positive_armor% 点护甲，削弱附近敌军 %aura_negative_armor% 点护甲。范围：%aura_radius%"
+		"DOTA_Tooltip_ability_item_mjz_assault_4_bonus_attack_speed"		"+攻击速度"
+		"DOTA_Tooltip_ability_item_mjz_assault_4_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_mjz_assault_4_Lore"						"在幽冥地带的深渊锻造，这件地狱盔甲提高整支军队的护甲和攻击速度。"
+		"DOTA_Tooltip_modifier_item_mjz_assault_4_buff"						"强袭胸甲 LVL 4"
+		"DOTA_Tooltip_modifier_item_mjz_assault_4_debuff"					"强袭胸甲 LVL 4"
+		//<<<<
+		//>>>>	MJZ 强袭胸甲 LVL 5
+		"DOTA_Tooltip_Ability_item_mjz_assault_5"	                        "强袭胸甲 LVL 5"
+		"DOTA_Tooltip_ability_item_mjz_assault_5_Description"				"<h1>被动：强袭光环</h1>附近友军单位和建筑提升 %aura_attack_speed% 攻击速度和 %aura_positive_armor% 点护甲，削弱附近敌军 %aura_negative_armor% 点护甲。范围：%aura_radius%"
+		"DOTA_Tooltip_ability_item_mjz_assault_5_bonus_attack_speed"		"+攻击速度"
+		"DOTA_Tooltip_ability_item_mjz_assault_5_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_mjz_assault_5_Lore"						"在幽冥地带的深渊锻造，这件地狱盔甲提高整支军队的护甲和攻击速度。"
+		"DOTA_Tooltip_modifier_item_mjz_assault_5_buff"						"强袭胸甲 LVL 5"
+		"DOTA_Tooltip_modifier_item_mjz_assault_5_debuff"					"强袭胸甲 LVL 5"
+		//<<<<
