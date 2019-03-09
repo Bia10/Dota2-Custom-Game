@@ -1,0 +1,12 @@
+	
+		//>>>>	MJZ Little Manta
+		"DOTA_Tooltip_Ability_item_mjz_little_manta"							"<font color='#4ae0bf'>Little Manta Style</font>"
+		"DOTA_Tooltip_Ability_item_mjz_little_manta_Description"				"<h1>Active: Mirror Image</h1> Creates %images_count% images of your hero that last %tooltip_illusion_duration% seconds. Melee images deal %tooltip_damage_outgoing_melee%%% damage and take %tooltip_damage_incoming_melee_total_pct%%% damage, while Ranged images deal %tooltip_damage_outgoing_ranged%% and take %tooltip_damage_incoming_ranged_total_pct%%% damage. Cooldown increased by %tooltip_ranged_cooldown_increase% seconds on ranged heroes."
+		"DOTA_Tooltip_Ability_item_mjz_little_manta_Lore"						"An axe made of reflective materials that causes confusion amongst enemy ranks."
+		"DOTA_Tooltip_Ability_item_mjz_little_manta_bonus_strength"				"+$str"
+		"DOTA_Tooltip_Ability_item_mjz_little_manta_bonus_agility"				"+$agi"
+		"DOTA_Tooltip_Ability_item_mjz_little_manta_bonus_intellect"			"+$int"
+		"DOTA_Tooltip_Ability_item_mjz_little_manta_bonus_attack_speed"			"%+Attack speed"
+		"DOTA_Tooltip_Ability_item_mjz_little_manta_bonus_movement_speed"		"%+Movement speed"
+		"DOTA_Tooltip_Ability_item_recipe_mjz_little_manta"						"<font color='#4ae0bf'>Recipe: Little Manta Style</font>"
+		//<<<<

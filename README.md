@@ -66,6 +66,7 @@
 | [魔法护盾](Item/mana_shield/README.md)               | 消耗魔法抵挡伤害             |
 | [龙芯 系列](Item/mjz_heart/README.md)                | 增加到五个等级，提高属性加成 |
 | [血精石 系列](Item/mjz_bloodstone/README.md)         | 增加到五个等级，提高属性加成 |
+| [小分身斧](Item/mjz_little_manta/README.md)          | 小道具                       |
 
 
 
