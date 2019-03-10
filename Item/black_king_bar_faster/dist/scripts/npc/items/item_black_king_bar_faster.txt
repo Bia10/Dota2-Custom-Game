@@ -19,10 +19,6 @@
 			"01"						"item_ogre_axe;item_ogre_axe;item_mithril_hammer"
 		}
 	}
-
-	//=================================================================================================================
-	// 迅速的黑皇杖 Black King Bar
-	//=================================================================================================================
 	"item_black_king_bar_faster"	
 	{
 		"ID"							"70116"
@@ -34,8 +30,6 @@
 		"Model"							"models/props_gameplay/red_box.vmdl" 
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"3600"
 		"ItemShopTags"					"str;damage;hard_to_tag"
 		"ItemQuality"					"epic"
@@ -49,33 +43,24 @@
 		"ItemCastOnPickup"				"0"			//是否拾起就使用
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		
-		// Precache
-		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+
+		"AbilityCooldown"				"15.0"
+
+		"AbilityManaCost"				"0"
+
+		"AbilityModifierSupportValue"	"0.25"	// mostly about the blink
+
+		"MaxUpgradeLevel"				"5"
+		"ItemBaseLevel"					"1"
+
 		"precache"
 		{
 			"particle"			"particles/status_fx/status_effect_avatar.vpcf"
 			"particle"			"particles/items_fx/black_king_bar_avatar.vpcf"
 		}
-		
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"0"
-		"AbilityCastPoint"				"0"
 
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"15.0"
-
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"0"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityModifierSupportValue"	"0.25"	// mostly about the blink
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
 			"01"
@@ -90,20 +75,19 @@
 			}
 			"03"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"10.0 7.5 5.0"
+				"var_type"				"FIELD_INTEGER"	//"FIELD_FLOAT"
+				"duration"				"10 9 8 7 6"
 			}
 			"04"	// 有多少个冷却时间级别
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_level"				"3"		
+				"max_level"				"5"		
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"model_scale"			"30"     // Percentage over model scale
 			}
-
 			
 		}
 	
@@ -131,7 +115,6 @@
 				"Target"        	"CASTER"
 				"Duration"      	"%duration"
 			}
-
 		}
 
 		"Modifiers"
@@ -171,8 +154,6 @@
 						"ControlPointEntities"
 						{
 							"CASTER"    "attach_hitloc"
-							"CASTER"    "attach_hitloc"
-							"CASTER"    "attach_hitloc"
 						}
 					}
 
@@ -185,7 +166,7 @@
 		
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_ITEM_UNIQUE" 	"100"	//100%魔法抗性
+					// "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_ITEM_UNIQUE" 	"100"	//100%魔法抗性
 				}
 
 				"States"

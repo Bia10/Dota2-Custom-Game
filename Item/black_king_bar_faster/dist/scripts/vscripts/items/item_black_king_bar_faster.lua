@@ -1,10 +1,10 @@
 
 function on_spell_start( keys )
-    -- local caster = keys.caster
-    local caster = EntIndexToHScript(keys.caster_entindex)   --物品携带者
+    local caster = keys.caster
+    -- local caster = EntIndexToHScript(keys.caster_entindex)   --物品携带者
 
     updateLevel(keys)
-    -- scaleModel(caster, keys.PercentageOverModelScale, keys.Duration)
+    scaleModel(caster, keys.PercentageOverModelScale, keys.Duration)
 
     caster:Purge(false, true, false, true, false)
 end
@@ -34,6 +34,8 @@ function updateLevel( keys )
 end
 
 function scaleModel(caster, PercentageOverModelScale, Duration)
+	if not Timers then return end
+
     local final_model_scale = (PercentageOverModelScale / 100) + 1  --This will be something like 1.3.
 	local model_scale_increase_per_interval = 100 / (final_model_scale - 1)
 
