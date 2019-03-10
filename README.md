@@ -92,6 +92,7 @@
 | [斯嘉蒂之眼 系列](Item/mjz_skadi/README.md)   | 增加到五个等级，提高属性加成               |
 | [雷神之锤 系列](Item/mjz_mjollnir/README.md)  | 增加到五个等级，提高属性加成               |
 | [慧光 系列](Item/mjz_kaya/README.md)          | 增加到五个等级，提高属性加成               |
+| [ 黯灭 系列](Item/mjz_desolator/README.md)    | 增加到五个等级，提高属性加成               |
 
 
 
