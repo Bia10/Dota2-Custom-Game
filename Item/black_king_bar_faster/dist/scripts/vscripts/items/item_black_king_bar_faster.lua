@@ -1,22 +1,21 @@
 
 function on_spell_start( keys )
-    local caster = keys.caster
-    -- local caster = EntIndexToHScript(keys.caster_entindex)   --物品携带者
+	if IsServer() then	
+		-- local caster = EntIndexToHScript(keys.caster_entindex)   --物品携带者
+		local caster = keys.caster
+		local ability = keys.ability
+		local ability_level = ability:GetLevel() - 1
 
-    updateLevel(keys)
-    scaleModel(caster, keys.PercentageOverModelScale, keys.Duration)
+		local duration = ability:GetLevelSpecialValueFor("duration", ability_level)
+		scaleModel(caster, keys.PercentageOverModelScale, duration)
 
-    caster:Purge(false, true, false, true, false)
-end
+		updateLevel(keys)
 
-function on_created( keys )
-	if keys.caster.BKBLevel ~= nil and keys.caster.BKBLevel ~= keys.ability:GetLevel() then
-		keys.ability:SetLevel(keys.caster.BKBLevel)
+		caster:Purge(false, true, false, true, false)
 	end
 end
 
 function updateLevel( keys )
-    --Level up BKB so future casts will use an updated cooldown and duration.
 	local current_level = keys.ability:GetLevel()
 	if current_level + 1 <= keys.MaxLevel then
 		keys.ability:SetLevel(current_level + 1)

@@ -156,12 +156,6 @@
 							"CASTER"    "attach_hitloc"
 						}
 					}
-
-					"RunScript"
-					{
-						"ScriptFile"					"items/item_black_king_bar_faster.lua"
-						"Function"						"on_created"
-					}
 				}
 		
 				"Properties"
