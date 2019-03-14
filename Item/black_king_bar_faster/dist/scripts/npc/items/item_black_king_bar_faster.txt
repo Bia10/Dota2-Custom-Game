@@ -86,7 +86,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"model_scale"			"30"     // Percentage over model scale
+				"model_scale"			"90 75 60 45 30"     // Percentage over model scale
 			}
 			
 		}
@@ -161,6 +161,7 @@
 				"Properties"
 				{
 					// "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_ITEM_UNIQUE" 	"100"	//100%魔法抗性
+					// "MODIFIER_PROPERTY_MODEL_SCALE"					"%model_scale"	// Unhandled - These properties aren't working
 				}
 
 				"States"

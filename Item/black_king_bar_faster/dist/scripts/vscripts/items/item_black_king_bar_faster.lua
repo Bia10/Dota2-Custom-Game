@@ -7,7 +7,8 @@ function on_spell_start( keys )
 		local ability_level = ability:GetLevel() - 1
 
 		local duration = ability:GetLevelSpecialValueFor("duration", ability_level)
-		scaleModel(caster, keys.PercentageOverModelScale, duration)
+		-- scaleModel(caster, keys.PercentageOverModelScale, duration)
+		caster:AddNewModifier(caster, ability, "modifier_black_king_bar_faster", {Duration = duration})
 
 		updateLevel(keys)
 
@@ -31,6 +32,43 @@ function updateLevel( keys )
 		end
 	end
 end
+
+
+------------------------------------------------------------------------
+
+LinkLuaModifier("modifier_black_king_bar_faster", "items/item_black_king_bar_faster.lua", LUA_MODIFIER_MOTION_NONE)
+
+modifier_black_king_bar_faster = class({})
+
+function modifier_black_king_bar_faster:IsHidden()
+	return true
+end
+
+if IsServer() then
+	function modifier_black_king_bar_faster:OnCreated()
+		local parent = self:GetParent()
+
+		if not parent then
+			self:Destroy()
+		end
+
+		local ability = self:GetAbility()
+		self.model_scale = ability:GetSpecialValueFor("model_scale")
+	end
+
+	function modifier_black_king_bar_faster:DeclareFunctions()
+		return {
+			MODIFIER_PROPERTY_MODEL_SCALE,
+		}
+	end
+
+	function modifier_black_king_bar_faster:GetModifierModelScale()
+		return self.model_scale
+	end
+end
+
+-----------------------------------------------------------------------
+
 
 function scaleModel(caster, PercentageOverModelScale, Duration)
 	if not Timers then return end
