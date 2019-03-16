@@ -81,6 +81,7 @@
 | [比干的七巧玲珑心](Item/bigan_octarine_core/README.md)       | 冷却减少更多                                 |
 | [人工合成的阿哈利姆神杖](Item/aghanim's_scepter_synth/README.md) | 能吃的A杖                                    |
 | [幸运羊刀](Item/mjz_luck_sheepstick/README.md)               | 看运气                                       |
+| [可食用的以太透镜](Item/mjz_aether_lens/README.md)           | 永久增加指向性技能和物品的施法距离           |
 
 
 
