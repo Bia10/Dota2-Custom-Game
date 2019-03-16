@@ -69,6 +69,7 @@
 | [血精石 系列](Item/mjz_bloodstone/README.md)         | 增加到五个等级，提高属性加成 |
 | [小分身斧](Item/mjz_little_manta/README.md)          | 小道具                       |
 | [强袭胸甲 系列](Item/mjz_assault/README.md)          | 增加到五个等级，提高属性加成 |
+| [冰甲 系列](Item/mjz_shivas_guard/README.md)         | 增加到五个等级，提高属性加成 |
 
 
 
