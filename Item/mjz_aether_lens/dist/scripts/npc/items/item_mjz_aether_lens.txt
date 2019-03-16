@@ -41,6 +41,10 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
 		
+		"precache"
+		{
+			"soundfile" 				"soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+		}
 		
 		"AbilitySpecial"
 		{
@@ -102,7 +106,6 @@
 
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_CAST_RANGE_BONUS"		"%cast_range_bonus"
 					"MODIFIER_PROPERTY_MANA_BONUS" 				"%bonus_mana"
 					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"		"%bonus_mana_regen"
 				}
