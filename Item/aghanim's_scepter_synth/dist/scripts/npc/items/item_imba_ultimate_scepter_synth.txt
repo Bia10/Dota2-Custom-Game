@@ -56,6 +56,11 @@
 		"SideShop"						"0"
         "ItemSellable"                  "0"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE" 
+		
+		"precache"
+		{
+			"soundfile" 				"soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+		}
 
 		// Special
 		"AbilitySpecial"
