@@ -87,14 +87,15 @@
 
 ### 圣器 (Artifacts)
 
-| 名称                                          | 说明                                       |
-| --------------------------------------------- | ------------------------------------------ |
-| [撒旦之邪力 系列](Item/mjz_satanic/README.md) | 增加到五个等级，提高属性加成               |
-| [回音战刃](Item/echo_sabre/README.md)         | 增加到五个等级，提高属性加成和缩短冷却时间 |
-| [斯嘉蒂之眼 系列](Item/mjz_skadi/README.md)   | 增加到五个等级，提高属性加成               |
-| [雷神之锤 系列](Item/mjz_mjollnir/README.md)  | 增加到五个等级，提高属性加成               |
-| [慧光 系列](Item/mjz_kaya/README.md)          | 增加到五个等级，提高属性加成               |
-| [ 黯灭 系列](Item/mjz_desolator/README.md)    | 增加到五个等级，提高属性加成               |
+| 名称                                              | 说明                                       |
+| ------------------------------------------------- | ------------------------------------------ |
+| [撒旦之邪力 系列](Item/mjz_satanic/README.md)     | 增加到五个等级，提高属性加成               |
+| [回音战刃](Item/echo_sabre/README.md)             | 增加到五个等级，提高属性加成和缩短冷却时间 |
+| [斯嘉蒂之眼 系列](Item/mjz_skadi/README.md)       | 增加到五个等级，提高属性加成               |
+| [雷神之锤 系列](Item/mjz_mjollnir/README.md)      | 增加到五个等级，提高属性加成               |
+| [慧光 系列](Item/mjz_kaya/README.md)              | 增加到五个等级，提高属性加成               |
+| [ 黯灭 系列](Item/mjz_desolator/README.md)        | 增加到五个等级，提高属性加成               |
+| [可食用的魔龙枪](Item/mjz_dragon_lance/README.md) | 永久增加远程英雄的攻击距离                 |
 
 
 
