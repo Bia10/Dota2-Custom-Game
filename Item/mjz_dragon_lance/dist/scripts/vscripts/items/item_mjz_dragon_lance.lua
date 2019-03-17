@@ -10,6 +10,8 @@ function OnEquip( keys )
     local modifier = 'modifier_item_mjz_dragon_lance'
     local modifier_stats = 'modifier_item_mjz_dragon_lance_stats'
 
+    if not caster:IsRangedAttacker() then return nil end
+
     -- 不叠加
     if caster:HasModifier(modifier_stats) then
 		return nil
@@ -44,6 +46,8 @@ function OnSpellStart( keys )
     local sound_cast = keys.sound_cast
     local item_name = ability:GetAbilityName()
     
+    if not caster:IsRangedAttacker() then return nil end
+
     -- 不叠加
     if caster:HasModifier(modifier_stats) then
 		return nil
