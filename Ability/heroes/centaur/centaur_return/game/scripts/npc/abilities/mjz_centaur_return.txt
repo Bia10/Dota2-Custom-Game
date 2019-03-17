@@ -1,0 +1,59 @@
+
+	//=================================================================================================================
+	// Centaur Warchief: Return (Retaliate)		反击
+	//=================================================================================================================
+	"mjz_centaur_return"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"AbilityTextureName"			"mjz_centaur_return"
+
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_centaur/centaur_return.vpcf"
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"return_damage"				"16 18 20 22"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"strength_pct"				"30 45 60 75"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_mjz_centaur_return"
+			{
+				"Passive"	"1"
+				"OnAttacked"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"abilities/hero_centaur/mjz_centaur_return.lua"
+						"Function"		"ReturnDamage"
+					}
+					"FireEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_centaur/centaur_return.vpcf"
+						"EffectAttachType"  "attach_hitloc"
+						"Target" 			"CASTER"
+						"ControlPointEntities"
+						{
+							"CASTER" 		"attach_hitloc"
+							"ATTACKER" 		"attach_hitloc"
+						}
+					}
+				}	
+			}
+		}
+	}
+
