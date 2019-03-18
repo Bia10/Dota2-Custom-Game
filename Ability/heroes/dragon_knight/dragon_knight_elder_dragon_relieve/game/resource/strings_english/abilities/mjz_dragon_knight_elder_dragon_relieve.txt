@@ -1,0 +1,7 @@
+    
+	"DOTA_Tooltip_ability_mjz_dragon_knight_elder_dragon_relieve"				    	"Elder Dragon Form Relieve"
+	"DOTA_Tooltip_ability_mjz_dragon_knight_elder_dragon_relieve_Description"	    	""
+	"DOTA_Tooltip_ability_mjz_dragon_knight_elder_dragon_relieve_Lore"	    		""
+	"DOTA_Tooltip_ability_mjz_dragon_knight_elder_dragon_relieve_Note0"	    		""
+	
+	
