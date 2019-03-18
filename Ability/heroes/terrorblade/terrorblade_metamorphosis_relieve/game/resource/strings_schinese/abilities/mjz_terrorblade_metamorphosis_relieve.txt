@@ -1,0 +1,6 @@
+    
+	"DOTA_Tooltip_ability_mjz_terrorblade_metamorphosis_relieve"				    	"解除变身"
+	"DOTA_Tooltip_ability_mjz_terrorblade_metamorphosis_relieve_Description"	    	""
+	"DOTA_Tooltip_ability_mjz_terrorblade_metamorphosis_relieve_Lore"	    		""
+	"DOTA_Tooltip_ability_mjz_terrorblade_metamorphosis_relieve_Note0"	    		""
+	
