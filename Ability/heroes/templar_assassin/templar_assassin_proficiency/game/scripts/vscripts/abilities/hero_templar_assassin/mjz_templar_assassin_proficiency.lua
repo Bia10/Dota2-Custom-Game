@@ -26,6 +26,11 @@ function OnProjectileHitUnit( event )
 	local modifier_name = "modifier_mjz_templar_assassin_proficiency_debuff"
 	
 
+	if ability:GetToggleState() then
+		EmitSoundOn('Hero_TemplarAssassin.Meld.Attack', target)
+	end
+	
+
 	local modifier = target:FindModifierByName(modifier_name)
 	if modifier then -- target:HasModifier(modifier_name)
 		-- target:RemoveModifierByName(modifier_name)

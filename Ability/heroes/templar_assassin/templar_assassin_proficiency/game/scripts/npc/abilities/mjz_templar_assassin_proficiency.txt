@@ -6,7 +6,8 @@
 	{
 		"BaseClass"						"ability_datadriven"
 
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		// "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE"
 		// "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 		// "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		// "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -65,12 +66,12 @@
 				"IsHidden"  		"1"
 
 				"OnAttack"
-				{
-					"FireSound"
-					{
-						"EffectName"		"Hero_TemplarAssassin.Meld.Attack"
-						"Target"			"TARGET"
-					}
+				{	
+					// "FireSound"
+					// {
+					// 	"EffectName"		"Hero_TemplarAssassin.Meld.Attack"
+					// 	"Target"			"TARGET"
+					// }
 					"TrackingProjectile"
 					{
 						"Target"           	"TARGET"
