@@ -1,0 +1,113 @@
+
+	"mjz_spectre_haunt"
+	{
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		// "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Spectre.Haunt"
+		// "AbilityDraftPreAbility"		"mjz_spectre_reality"
+		"AbilityTextureName"			"spectre_haunt"
+
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+
+		"AbilityCooldown"				"100 80 60"
+
+		"AbilityManaCost"				"60 100 140"
+
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"5.0 6.0 7.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"illusion_damage_outgoing"	"-60 -40 -20"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tooltip_outgoing"			"40 60 80"
+				"LinkedSpecialBonus"		"special_bonus_unique_spectre_4"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"illusion_damage_incoming"	"100 100 100"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tooltip_illusion_total_damage_incoming"	"200 200 200"
+			}			
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"attack_delay"				"1.0 1.0 1.0"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"illusion_duration"			"10.0 20.0 30.0"
+			}	
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"illusion_count"			"4"
+			}			
+		}
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Hero_Spectre.HauntCast"
+				"Target"		"CASTER"
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"abilities/hero_spectre/mjz_spectre_haunt.lua"
+				"Function"		"OnSpellStart"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_mjz_spectre_haunt_illusion_buff"
+			{
+				"IsHidden"	"0"
+				"IsBuff"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE" 				"400"
+				}
+				"States"
+				{
+					// "MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+
+				"OnTakeDamage"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"abilities/hero_spectre/mjz_spectre_haunt.lua"
+						"Function"		"OnIllusionTakeDamage"
+						"DamageTaken"	"%attack_damage"
+					}
+				}
+			}
+		}
+	}
+
+
+

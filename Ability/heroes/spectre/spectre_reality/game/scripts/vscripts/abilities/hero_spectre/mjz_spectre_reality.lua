@@ -33,8 +33,14 @@ function OnSpellStart( event )
 				if hero:GetPlayerOwnerID() == playerOwnerID then
 					can_work = true
 					point = hero:GetAbsOrigin()
-					hero:Kill(nil, nil)
-					break
+					if hero._mjz_spectre_haunt_illusion then
+						local caster_point = caster:GetAbsOrigin()
+						hero:SetAbsOrigin(caster_point)
+						FindClearSpaceForUnit(hero, caster_point, false)
+					else
+						hero:Kill(nil, nil)
+					end
+					break					
 				end
 			end
 		end
