@@ -64,7 +64,17 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"illusion_count"			"4"
-			}			
+			}
+			"12"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"illusion_heal_damage_per"	"50"
+			}
+			"13"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"hero_heal_damage_per"		"20"
+			}				
 		}
 
 		"OnSpellStart"

@@ -19,15 +19,21 @@ end
 function OnIllusionTakeDamage( keys )
 	if not IsServer() then return nil end
 
-
+	local ability = keys.ability
 	local unit = keys.unit
+	local hero = unit:GetOwnerEntity()
 	local attacker = keys.attacker
 	local attack_damage = keys.DamageTaken
 
-	if unit._mjz_spectre_haunt_illusion then
-		unit:Heal(attack_damage, nil)
-		local hero = unit:GetOwnerEntity()
-		hero:Heal(attack_damage, nil)
+	local ability_level = ability:GetLevel() -1 
+	local illusion_heal_damage_per  = ability:GetLevelSpecialValueFor("illusion_heal_damage_per", ability_level)
+	local hero_heal_damage_per = ability:GetLevelSpecialValueFor( "hero_heal_damage_per", ability_level )
+	local illusion_heal_damage = attack_damage * illusion_heal_damage_per / 100
+	local hero_heal_damage = attack_damage * hero_heal_damage_per / 100
+
+	if hero and unit._mjz_spectre_haunt_illusion then
+		unit:Heal(illusion_heal_damage, nil)
+		hero:Heal(hero_heal_damage, nil)
 	end
 	
 end

@@ -3,8 +3,10 @@
 	"DOTA_Tooltip_ability_mjz_spectre_haunt_Description"	    ""
 	"DOTA_Tooltip_ability_mjz_spectre_haunt_Lore"	    		""
 	"DOTA_Tooltip_ability_mjz_spectre_haunt_Note0"	    		""
-	"DOTA_Tooltip_ability_mjz_spectre_haunt_illusion_duration"	"魅影持续时间："
-	"DOTA_Tooltip_ability_mjz_spectre_haunt_illusion_count"		"魅影数量："
+	"DOTA_Tooltip_ability_mjz_spectre_haunt_illusion_duration"	"幻象持续时间："
+	"DOTA_Tooltip_ability_mjz_spectre_haunt_illusion_count"		"幻象数量："
 	"DOTA_Tooltip_ability_mjz_spectre_haunt_tooltip_outgoing"	"%幻象造成的伤害："
-	"DOTA_Tooltip_ability_mjz_spectre_haunt_tooltip_illusion_total_damage_incoming"		"幻象受到的伤害："
+	"DOTA_Tooltip_ability_mjz_spectre_haunt_tooltip_illusion_total_damage_incoming"		"%幻象受到的伤害："
+	"DOTA_Tooltip_ability_mjz_spectre_haunt_illusion_heal_damage_per"		"%幻象回复受到的伤害："
+	"DOTA_Tooltip_ability_mjz_spectre_haunt_hero_heal_damage_per"			"%英雄回复受到的伤害："
 	

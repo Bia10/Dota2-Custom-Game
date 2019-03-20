@@ -3,8 +3,9 @@
 	"DOTA_Tooltip_ability_mjz_spectre_haunt_Description"	    ""
 	"DOTA_Tooltip_ability_mjz_spectre_haunt_Lore"	    		""
 	"DOTA_Tooltip_ability_mjz_spectre_haunt_Note0"	    		""
-	"DOTA_Tooltip_ability_mjz_spectre_haunt_illusion_duration"	"Haunt Duration: "
-	"DOTA_Tooltip_ability_mjz_spectre_haunt_illusion_count"		"Haunt Count: "
+	"DOTA_Tooltip_ability_mjz_spectre_haunt_illusion_duration"	"Illusion Duration: "
+	"DOTA_Tooltip_ability_mjz_spectre_haunt_illusion_count"		"Illusion Count: "
 	"DOTA_Tooltip_ability_mjz_spectre_haunt_tooltip_outgoing"	"%Illusion Damage Dealt: "
-	"DOTA_Tooltip_ability_mjz_spectre_haunt_tooltip_illusion_total_damage_incoming"		"Illusion Damage Taken: "
-	
+	"DOTA_Tooltip_ability_mjz_spectre_haunt_tooltip_illusion_total_damage_incoming"		"%Illusion Damage Taken: "
+	"DOTA_Tooltip_ability_mjz_spectre_haunt_illusion_heal_damage_per"		"%Illusion Heal Damage: "
+	"DOTA_Tooltip_ability_mjz_spectre_haunt_hero_heal_damage_per"			"%Hero Heal Damage: "
