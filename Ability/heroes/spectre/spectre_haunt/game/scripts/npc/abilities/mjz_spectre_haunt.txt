@@ -106,6 +106,21 @@
 					}
 				}
 			}
+
+			"modifier_mjz_spectre_haunt_illusion_destroy"
+			{
+				"IsHidden"	"0"
+				"IsBuff"	"1"
+
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"abilities/hero_spectre/mjz_spectre_haunt.lua"
+						"Function"		"OnIllusionDestroy"
+					}
+				}
+			}
 		}
 	}
 

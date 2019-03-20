@@ -32,6 +32,11 @@ function OnIllusionTakeDamage( keys )
 	
 end
 
+function OnIllusionDestroy( keys )
+	local unit = keys.target
+	unit:RemoveSelf()
+end
+
 function LevelUpReality (keys)
 	local caster = keys.caster
 	local ability_reality = caster:FindAbilityByName("spectre_reality")
@@ -91,14 +96,16 @@ function CreateIllusion(caster, ability)
 	end
 
 	-- Set the unit as an illusion
-	illusion:AddNewModifier(caster, ability, "modifier_illusion", { duration = duration, outgoing_damage = outgoingDamage, incoming_damage = incomingDamage })
+	illusion:AddNewModifier(caster, ability, "modifier_illusion", { duration = duration + 1, outgoing_damage = outgoingDamage, incoming_damage = incomingDamage })
 	
 	-- Without MakeIllusion the unit counts as a hero, e.g. if it dies to neutrals it says killed by neutrals, it respawns, etc.
 	illusion:MakeIllusion()
 
 	-- illusion:AddNewModifier(caster, ability, "modifier_mjz_spectre_haunt_illusion_buff", {})
 	ability:ApplyDataDrivenModifier(caster, illusion, "modifier_mjz_spectre_haunt_illusion_buff", {})
+	ability:ApplyDataDrivenModifier(caster, illusion, "modifier_mjz_spectre_haunt_illusion_destroy", {duration = duration})
 
+	
 	return illusion
 end
 
