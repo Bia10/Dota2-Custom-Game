@@ -1,0 +1,7 @@
+    
+	"DOTA_Tooltip_ability_mjz_lycan_shapeshift_relieve"				    	"Shapeshift Relieve"
+	"DOTA_Tooltip_ability_mjz_lycan_shapeshift_relieve_Description"	    	""
+	"DOTA_Tooltip_ability_mjz_lycan_shapeshift_relieve_Lore"	    		""
+	"DOTA_Tooltip_ability_mjz_lycan_shapeshift_relieve_Note0"	    		""
+	
+	

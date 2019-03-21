@@ -1,0 +1,87 @@
+	
+	//=================================================================================================================
+	// Lycan: Shapeshift Relieve		解除变身			
+	//=================================================================================================================
+	"mjz_lycan_shapeshift_relieve"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		// "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		// "SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Lycan.Shapeshift.Cast"
+		"AbilityTextureName"			"mjz_lycan_shapeshift_relieve"
+
+		// "AbilityCastAnimation"			"ACT_INVALID"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0.0"
+		"AbilityManaCost"				"0"
+
+		"MaxLevel"						"1"
+
+		"precache"	
+		{
+		}
+
+		"AbilitySpecial"
+		{
+			"05"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"think_interval"				"1.0"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"health_drain_per_second"		"-1.0"
+			}	
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"abilities/hero_lycan/mjz_lycan_shapeshift_relieve.lua"
+				"Function"		"OnSpellStart"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_mjz_lycan_shapeshift_relieve"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"abilities/hero_lycan/mjz_lycan_shapeshift_relieve.lua"
+						"Function"		"OnCreated"
+					}
+				}
+
+				"ThinkInterval"  "%think_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"abilities/hero_lycan/mjz_lycan_shapeshift_relieve.lua"
+						"Function"		"OnIntervalThink"
+					}
+				}
+			}
+
+			"modifier_mjz_lycan_shapeshift_relieve_health"
+			{
+				"IsHidden"           "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE" 	"%health_drain_per_second"
+				}
+			}
+			
+		}
+	}
+
+	
