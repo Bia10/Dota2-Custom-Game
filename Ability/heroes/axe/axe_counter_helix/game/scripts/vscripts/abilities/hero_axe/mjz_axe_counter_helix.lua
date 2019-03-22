@@ -45,7 +45,9 @@ function ActionDamageToTarget( event )
 		victim = target,
 		attacker = attacker,
 		damage = damage_amount,
-		damage_type = damage_type
+        damage_type = damage_type,
+        damage_flags = DOTA_DAMAGE_FLAG_BYPASSES_INVULNERABILITY,  -- 无视技能免疫
+	    ability = ability,
 	}
 	ApplyDamage(dmg_table_target)
 end
