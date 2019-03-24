@@ -220,8 +220,8 @@ function FindTargetEnemy(unit, point, radius)
     local iTeamFilter = DOTA_UNIT_TARGET_TEAM_ENEMY  -- 目标是敌人单位
     -- 目标单位类型
 	local iTypeFilter = DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC --DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_CREEP           
-	-- 忽视建筑物、支持魔法免疫
-    local iFlagFilter = DOTA_UNIT_TARGET_FLAG_NOT_ATTACK_IMMUNE + DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_INVULNERABLE   
+	-- 仅针对可见的单位、忽视建筑物、支持魔法免疫
+    local iFlagFilter = DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE + DOTA_UNIT_TARGET_FLAG_NO_INVIS + DOTA_UNIT_TARGET_FLAG_NOT_ATTACK_IMMUNE + DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_INVULNERABLE   
     local iOrder = FIND_CLOSEST                         -- 寻找最近的
     local bCanGrowCache = false             -- 通常值
     return FindUnitsInRadius( iTeamNumber, vPosition, hCacheUnit, 

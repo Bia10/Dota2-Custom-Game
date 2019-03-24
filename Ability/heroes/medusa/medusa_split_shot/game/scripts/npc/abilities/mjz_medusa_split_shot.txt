@@ -11,6 +11,7 @@
 		"AbilityUnitTargetFlag"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilityTextureName"			"medusa_split_shot"	// "mjz_medusa_split_shot"
 
 		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
