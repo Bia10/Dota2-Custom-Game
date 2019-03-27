@@ -64,10 +64,7 @@ if IsServer() then
 
         local caster = self:GetCaster()
         local ability = self
-
-        self.damage_per_use = self:GetSpecialValueFor("damage_per_use")
-        self.damage_delay = self:GetSpecialValueFor("damage_delay")
-        
+     
         self.stack_modifier_name = "modifier_mjz_lina_laguna_blade_bonus"
         self.creature_enabled = self:GetSpecialValueFor("creature_enabled")
         self.creature_health = self:GetSpecialValueFor("creature_health")
@@ -76,7 +73,7 @@ if IsServer() then
         local damage_per_kill = self:GetSpecialValueFor("damage_per_kill")
         local kill_grace_duration = self:GetSpecialValueFor("kill_grace_duration")
 
-        local kill_count = self.kill_count or 0
+        local kill_count = caster:GetModifierStackCount(self.stack_modifier_name, nil)
         local damage = base_damage + damage_per_kill * kill_count
 
         if caster:HasScepter() then
