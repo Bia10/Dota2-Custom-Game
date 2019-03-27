@@ -1,8 +1,9 @@
     
-	"DOTA_Tooltip_ability_mjz_lina_laguna_blade"				    "神灭斩"
-	"DOTA_Tooltip_ability_mjz_lina_laguna_blade_Description"	    "对单个敌方单位射出闪电，造成大量伤害。"
-	"DOTA_Tooltip_ability_mjz_lina_laguna_blade_Lore"	    		"莉娜身边的空气变得极度炙热，产生白热的闪电来灼烧过于接近的敌人。"
-	"DOTA_Tooltip_ability_mjz_lina_laguna_blade_Note0"	    		""
+	"DOTA_Tooltip_ability_mjz_lina_laguna_blade"				    	"神灭斩"
+	"DOTA_Tooltip_ability_mjz_lina_laguna_blade_Description"	    	"对单个敌方单位射出闪电，造成大量伤害。\n\n可用神杖升级。"
+	"DOTA_Tooltip_ability_mjz_lina_laguna_blade_Aghanim_Description"	"提高伤害，减少冷却时间。神灭斩将作用一小片区域内的所有单位。"
+	"DOTA_Tooltip_ability_mjz_lina_laguna_blade_Lore"	    			"莉娜身边的空气变得极度炙热，产生白热的闪电来灼烧过于接近的敌人。"
+	"DOTA_Tooltip_ability_mjz_lina_laguna_blade_Note0"	    			""
 	"DOTA_Tooltip_ability_mjz_lina_laguna_blade_damage"					"伤害："
 	"DOTA_Tooltip_ability_mjz_lina_laguna_blade_damage_per_kill"		"每次击杀提升伤害："
 	"DOTA_Tooltip_ability_mjz_lina_laguna_blade_kill_grace_duration"	"击杀计算时间："
