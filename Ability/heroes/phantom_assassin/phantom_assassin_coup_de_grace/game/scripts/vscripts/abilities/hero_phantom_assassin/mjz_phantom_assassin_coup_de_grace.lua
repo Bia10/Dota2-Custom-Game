@@ -1,12 +1,48 @@
 
-function OnAttackStart( event )
-	if not IsServer() then return nil end
+local modifier_crit = 'modifier_mjz_phantom_assassin_coup_de_grace_crit'
 
+function OnOrbFire(event)
+	-- print('OnOrbFire')
 	local caster = event.caster
 	local ability = event.ability
 
+	if IsCrit(event) then
+		PlayEffect(event)
+	end
+
+	caster:RemoveModifierByName(modifier_crit)
+
+	OnRandomStart(event)
+end
+
+function OnOrbImpact(event)
+	-- print('OnOrbImpact')
+	local caster = event.caster
+	local ability = event.ability
+end
+
+function OnAttackStart( event )
+	-- print('OnAttackStart')
+end
+
+function OnAttackLanded( event )
+	-- print('OnAttackLanded')
+end
+
+function IsCrit( event )
+	local caster = event.caster
+	local ability = event.ability
+	return caster:HasModifier(modifier_crit) 
+end
+
+function OnRandomStart( event )
+	local caster = event.caster
+	local ability = event.ability
+	local target = event.target
+
 	local crit_chance = GetTalentSpecialValueFor(ability, 'crit_chance')
 
+	-- "PseudoRandom"	"DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
 	local random_value = RandomInt(1, 100)
     if random_value <= crit_chance  then
         OnRandomSuccess(event)
@@ -14,24 +50,23 @@ function OnAttackStart( event )
 end
 
 function OnRandomSuccess( event )
+	-- print('OnRandomSuccess')
 	local caster = event.caster
 	local ability = event.ability
 	local attacker = event.attacker
 	local target = event.target
-	local modifierName = event.ModifierName
 
-	if target and ( target:IsBuilding() == false ) and ( target:IsOther() == false ) 
-			and attacker and ( attacker:GetTeamNumber() ~= target:GetTeamNumber() ) then
-		ability:ApplyDataDrivenModifier(caster, caster, 'modifier_mjz_phantom_assassin_coup_de_grace_crit', {})
+	local c1 = ( target:IsBuilding() == false ) and ( target:IsOther() == false ) 
+	local c2 = ( attacker:GetTeamNumber() ~= target:GetTeamNumber() )
+	if c1 and c2 then
+		ability:ApplyDataDrivenModifier(caster, caster, modifier_crit, {duration=-1})
 	end
 end
 
-
-function OnAttackLanded( event )
+function PlayEffect( event )
 	if not IsServer() then return nil end
 
 	local caster = event.caster
-	local attacker = event.attacker
 	local target = event.target
 	local ability = event.ability
 

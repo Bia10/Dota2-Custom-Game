@@ -45,60 +45,41 @@
 		{
 			"modifier_mjz_phantom_assassin_coup_de_grace"
 			{
-				"Passive"	"1"
-				"IsHidden"	"1"
+				"Passive"		"1"
+				"IsHidden"		"1"
+ 				"IsPurgable"    "0"
 
-				"OnAttackStart"
+				"Orb"
+		        {
+		            "Priority"          "DOTA_ORB_PRIORITY_ITEM"
+		            "ProjectileName"    "particles/base_attacks/fountain_attack_attack_trail.vpcf"
+		            "CastAttack"        "0"
+		        }
+		        "OnOrbFire"
 				{
-					"RemoveModifier"
-					{
-						"ModifierName"	"modifier_mjz_phantom_assassin_coup_de_grace_crit"
-						"Target"		"CASTER"
-					}
 					"RunScript"
 					{
 						"ScriptFile"	"abilities/hero_phantom_assassin/mjz_phantom_assassin_coup_de_grace.lua"
-						"Function"		"OnAttackStart"
-						"ModifierName"	"modifier_mjz_phantom_assassin_coup_de_grace_crit"
+						"Function"		"OnOrbFire"
 					}
-
-					// "Random"
-					// {
-					// 	"Chance"		"%crit_chance"
-					// 	"PseudoRandom"	"DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
-					// 	"OnSuccess"
-					// 	{
-					// 		"RunScript"
-					// 		{
-					// 			"ScriptFile"	"abilities/hero_phantom_assassin/mjz_phantom_assassin_coup_de_grace.lua"
-					// 			"Function"		"OnRandomSuccess"
-					// 			"ModifierName"	"modifier_mjz_phantom_assassin_coup_de_grace_crit"
-					// 		}
-					// 	}
-					// }
+				}
+				"OnOrbImpact"	
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"abilities/hero_phantom_assassin/mjz_phantom_assassin_coup_de_grace.lua"
+						"Function"		"OnOrbImpact"
+					}
 				}
 			}
 			"modifier_mjz_phantom_assassin_coup_de_grace_crit"
 			{
-				"IsHidden"	"1"
+				"IsHidden"		"1"
+ 				"IsPurgable"    "0"
 
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" 	"%crit_bonus"
-				}
-
-				"OnAttackLanded"
-				{
-					"RemoveModifier"
-					{
-						"ModifierName"	"modifier_mjz_phantom_assassin_coup_de_grace_crit"
-						"Target"		"CASTER"
-					}
-					"RunScript"
-					{
-						"ScriptFile"	"abilities/hero_phantom_assassin/mjz_phantom_assassin_coup_de_grace.lua"
-						"Function"		"OnAttackLanded"
-					}
 				}
 			}
 		}
