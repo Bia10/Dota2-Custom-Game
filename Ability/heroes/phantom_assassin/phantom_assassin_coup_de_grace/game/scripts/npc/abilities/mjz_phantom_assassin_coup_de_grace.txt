@@ -1,0 +1,105 @@
+
+	//=================================================================================================================
+	// Phantom Coup de Grace			恩赐解脱
+	//=================================================================================================================
+	"mjz_phantom_assassin_coup_de_grace"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"phantom_assassin_coup_de_grace"	// "mjz_phantom_assassin_coup_de_grace"
+		"AbilitySound"					"Hero_PhantomAssassin.CoupDeGrace"
+
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
+			"particle"		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+			"particle" 		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact_dagger.vpcf"
+			"particle" 		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact_dagger_mechanical.vpcf"
+
+			"particle" 		"particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/phantom_assassin_crit_impact_dagger_mechanical_arcana.vpcf"
+			"particle" 		"particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/phantom_assassin_crit_impact_dagger_arcana.vpcf"
+
+			"particle"		"particles/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+			"particle"		"particles/hero_phantom_assassin/phantom_assassin_crit_impact_dagger.vpcf"			
+			"particle"		"particles/hero_phantom_assassin/phantom_assassin_crit_impact_dagger_arcana.vpcf"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_bonus"				"230 340 450"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_chance"				"20"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_2"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_mjz_phantom_assassin_coup_de_grace"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+
+				"OnAttackStart"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_mjz_phantom_assassin_coup_de_grace_crit"
+						"Target"		"CASTER"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"abilities/hero_phantom_assassin/mjz_phantom_assassin_coup_de_grace.lua"
+						"Function"		"OnAttackStart"
+						"ModifierName"	"modifier_mjz_phantom_assassin_coup_de_grace_crit"
+					}
+
+					// "Random"
+					// {
+					// 	"Chance"		"%crit_chance"
+					// 	"PseudoRandom"	"DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+					// 	"OnSuccess"
+					// 	{
+					// 		"RunScript"
+					// 		{
+					// 			"ScriptFile"	"abilities/hero_phantom_assassin/mjz_phantom_assassin_coup_de_grace.lua"
+					// 			"Function"		"OnRandomSuccess"
+					// 			"ModifierName"	"modifier_mjz_phantom_assassin_coup_de_grace_crit"
+					// 		}
+					// 	}
+					// }
+				}
+			}
+			"modifier_mjz_phantom_assassin_coup_de_grace_crit"
+			{
+				"IsHidden"	"1"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" 	"%crit_bonus"
+				}
+
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_mjz_phantom_assassin_coup_de_grace_crit"
+						"Target"		"CASTER"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"abilities/hero_phantom_assassin/mjz_phantom_assassin_coup_de_grace.lua"
+						"Function"		"OnAttackLanded"
+					}
+				}
+			}
+		}
+	}
