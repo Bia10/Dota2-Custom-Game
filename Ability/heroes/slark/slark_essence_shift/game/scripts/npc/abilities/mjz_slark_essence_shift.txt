@@ -1,0 +1,53 @@
+
+	//=================================================================================================================
+	// Slark: Essence Shift				能量转移
+	//=================================================================================================================
+	"mjz_slark_essence_shift"
+	{
+		"BaseClass"						"ability_lua"	//	"ability_datadriven"
+		"ScriptFile"					"abilities/hero_slark/mjz_slark_essence_shift.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"slark_essence_shift"	//	"mjz_slark_essence_shift"
+
+		"precache"
+		{
+			"particle"		"particles/units/heroes/hero_pudge/pudge_fleshheap_count.vpcf"
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi_gain"				"3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stat_loss"				"1"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"15 30 60 120"
+				"LinkedSpecialBonus"	"special_bonus_unique_slark_4"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heap_range"			"500"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"heap_amount"			"0.2 0.3 0.4 0.5"
+			}
+			"12"						// 1 = Strength, 2 = Agility, 3 = Intelligence
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heap_type"				"2"
+			}
+		}
+	}
+
