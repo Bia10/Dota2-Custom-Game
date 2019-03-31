@@ -1,0 +1,7 @@
+    
+	"DOTA_Tooltip_ability_mjz_power_up"				    "力量提升"
+	"DOTA_Tooltip_ability_mjz_power_up_Description"	    "攻击力提升%bonus_damage_pct%%%。"
+	"DOTA_Tooltip_ability_mjz_power_up_Lore"	    		""
+	"DOTA_Tooltip_ability_mjz_power_up_Note0"	    		""
+	"DOTA_Tooltip_ability_mjz_power_up_bonus_damage_pct"	"%攻击力提升："
+	

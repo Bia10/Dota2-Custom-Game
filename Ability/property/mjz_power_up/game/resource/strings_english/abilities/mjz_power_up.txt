@@ -1,0 +1,7 @@
+    
+	"DOTA_Tooltip_ability_mjz_power_up"				    "Power Up"
+	"DOTA_Tooltip_ability_mjz_power_up_Description"	    "Bonus damage %bonus_damage_pct%%% on attack."
+	"DOTA_Tooltip_ability_mjz_power_up_Lore"	    		""
+	"DOTA_Tooltip_ability_mjz_power_up_Note0"	    		""
+	"DOTA_Tooltip_ability_mjz_power_up_bonus_damage_pct"	"%Attack Damage Bonus: "
+	
