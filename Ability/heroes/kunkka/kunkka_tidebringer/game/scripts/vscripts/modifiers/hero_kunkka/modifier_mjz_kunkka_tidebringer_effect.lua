@@ -23,9 +23,9 @@ if IsServer() then
 		local ability = self:GetAbility()
 
 		if self.weapon_pfx == nil then
-			local weapon_pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_kunkka/kunkka_weapon_tidebringer.vpcf", PATTACH_CUSTOMORIGIN, parent)
-			ParticleManager:SetParticleControlEnt(weapon_pfx, 0, parent, PATTACH_POINT_FOLLOW, "attach_attack1", parent:GetAbsOrigin(), true)
-			ParticleManager:SetParticleControlEnt(weapon_pfx, 2, parent, PATTACH_POINT_FOLLOW, "attach_attack2", parent:GetAbsOrigin(), true)
+			local weapon_pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_kunkka/kunkka_weapon_tidebringer.vpcf", PATTACH_POINT_FOLLOW, parent)
+			ParticleManager:SetParticleControlEnt(weapon_pfx, 0, parent, PATTACH_POINT_FOLLOW, "attach_tidebringer", parent:GetAbsOrigin(), true)
+			ParticleManager:SetParticleControlEnt(weapon_pfx, 2, parent, PATTACH_POINT_FOLLOW, "attach_sword", parent:GetAbsOrigin(), true)
 			self.weapon_pfx = weapon_pfx
 		end
 	end
