@@ -1,0 +1,37 @@
+
+	"mjz_lifestealer_anabolic_frenzy"
+	{
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"abilities/hero_lifestealer/mjz_lifestealer_anabolic_frenzy.lua"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"mjz_lifestealer_anabolic_frenzy"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_move_speed_pct"		"3 5 7 9"
+				"LinkedSpecialBonus"		"special_bonus_unique_mjz_anabolic_frenzy_move"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_speed"		"10 20 30 40"
+			}
+		}
+	}
+	"special_bonus_unique_mjz_anabolic_frenzy_move"
+	{
+		"BaseClass"				"special_bonus_undefined"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"			"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"value"			"11"
+			}
+		}
+	}
